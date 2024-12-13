@@ -1,5 +1,23 @@
 ---
+import { Image } from 'astro:assets';
+import buttonarrow from "../assets/images/buttonarrow.svg"
 ---
 <div>
-    <button class="border-2 border-black"><slot /></button>
+   <button
+  class="border border-black py-2 px-4 rounded-3xl flex items-center gap-3 justify-between hover:bg-black hover:text-white"
+>
+  <slot />
+  <svg
+    class="w-6 h-6"
+    width="40"
+    height="16"
+    viewBox="0 0 13 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11.9786 4.35355C12.1738 4.15829 12.1738 3.84171 11.9786 3.64645L8.79657 0.464466C8.60131 0.269204 8.28473 0.269204 8.08947 0.464466C7.8942 0.659728 7.8942 0.976311 8.08947 1.17157L10.9179 4L8.08947 6.82843C7.8942 7.02369 7.8942 7.34027 8.08947 7.53553C8.28473 7.7308 8.60131 7.7308 8.79657 7.53553L11.9786 4.35355ZM0 4.5L11.625 4.5V3.5L0 3.5L0 4.5Z"
+      fill="currentColor"
+    />
+  </svg>
+</button>
 </div>

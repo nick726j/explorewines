@@ -1,0 +1,99 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import filler from "../assets/images/filler.png";
+import stepbystep from "../assets/images/stepbystep.svg"
+import stepbystepmobile from "../assets/images/stepbystepmobile.svg"
+
+---
+<MainLayout title="Titel">
+	<article class="mx-auto">
+
+															    <!-- VINABONNEMENTER DISPLAY -->
+<section class=" py-16 px-8">
+  <div class="mx-auto">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-red-600 mb-12">
+      VINABONNEMENT
+    </h1>
+
+    <!-- Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- RØDVIN LAV OM TIL CARDS-->
+      <div class="text-center space-y-4">
+        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
+        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+        </div>
+        <p class="text-lg font-medium text-gray-800">Rødvinskasse</p>
+      </div>
+
+      <!-- HVIDVIN LAV OM TIL CARDS-->
+      <div class="text-center space-y-4">
+        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
+        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+        </div>
+        <p class="text-lg font-medium text-gray-800">Hvidvinskasse</p>
+      </div>
+
+      <!-- MIX LAV OM TIL CARDS-->
+      <div class="text-center space-y-4">
+        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
+        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+        </div>
+        <p class="text-lg font-medium text-gray-800">Mixed kasse</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+															    <!-- VINABONNEMENTER DISPLAY -->
+
+<section class="bg-red-700 text-white py-16 px-8">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Venstre Content -->
+    <div class="md:col-span-2 space-y-6">
+      <h3 class="text-2xl md:text-3xl font-bold">
+        Denne måneds vinkasser
+      </h3>
+      <p class="text-lg leading-relaxed">
+        Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned.
+        Du kan forvente gardiner, garvesyre og gourmetinspiration – og så kan du forvente vin
+        til enhver lejlighed. Kassen sammensættes, så der både er gode hverdagsvine til et
+        velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du
+        skænker den for dine venner.
+      </p>
+   <Button>Køb nu</Button>
+    </div>
+
+    <!-- Højre Content -->
+    <div class="space-y-4 col-start-4">
+      <h4 class="text-xl font-bold">Detaljer</h4>
+      <ul class="text-lg leading-relaxed">
+        <li>Antal vine pr. kasse: 8 stk.</li>
+        <li>Pris: 599 DKK (alt inklusivt)</li>
+        <li>Leveringsdag: Sidste torsdag i måneden</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="">
+	<div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+	     <h2 class="text-xl tracking-wide">Sådan fungerer det</h2>
+      <p class="text-lg md:text-xl leading-relaxed row-start-2">
+Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.      </p>
+</div>
+<img class="block md:hidden" src={stepbystepmobile.src}alt="step by step">
+<img class="md:block hidden" src={stepbystep.src}alt="step by step">
+</section>
+
+
+															    <!--  ANMELDELSER -->
+
+
+
+
+	</article>
+</MainLayout>

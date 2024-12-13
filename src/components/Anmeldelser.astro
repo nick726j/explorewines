@@ -1,0 +1,77 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+---
+
+
+<section class="py-16 px-8">
+  <div class="mx-auto space-y-8">
+    <!-- Heading -->
+    <div class="flex justify-between items-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">VORES MEDLEMMER SIGER...</h2>
+    <Button>Se Trustpilot</Button>
+    </div>
+
+
+      <!-- Review Items -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- Review 1 -->
+        <div class="text-center space-y-4 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-center text-black">
+              ★★★★★
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Enkel og overkommelig luksus</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              "Jeg elsker vin, men jeg hader at stå i supermarkedet og være usikker på, hvad jeg skal vælge. Denne vinabonnementstjeneste har været en gave! 8 flasker for kun 599 kr..."
+            </p>
+          </div>
+          <p class="text-gray-800 font-medium mt-auto">- Susanne Iversen</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="text-center space-y-4 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-center text-black">
+              ★★★★★
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Perfekt til vinelskeren på budget</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              "Jeg er ikke en vinkender, men jeg kan godt lide at prøve forskellige vine, og denne tjeneste er perfekt..."
+            </p>
+          </div>
+          <p class="text-gray-800 font-medium mt-auto">- Søren Larsen</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="text-center space-y-4 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-center text-black">
+              ★★★★☆
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Nemt og fleksibelt</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              "Jeg var lidt skeptisk i starten, men nu er jeg helt solgt. Det er fantastisk, hvor nemt det er..."
+            </p>
+          </div>
+          <p class="text-gray-800 font-medium mt-auto">- Nynne Jensen</p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="text-center space-y-4 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex justify-center text-black">
+              ★★★★★
+            </div>
+            <h3 class="text-lg font-bold text-gray-800">Fik mig til at prøve nye vine</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              "Jeg har længe drukket de samme vine igen og igen, men denne abonnementsordning har virkelig åbnet mine øjne..."
+            </p>
+          </div>
+          <p class="text-gray-800 font-medium mt-auto">- Mathias Christensen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
