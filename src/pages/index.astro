@@ -8,6 +8,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import filler from "../assets/images/filler.png";
 import herotext from "../assets/images/herotext.svg";
+import bordvin from "../assets/images/bordvin.svg";
+import logo from "../assets/images/logo.svg";
+import collage from "../assets/images/collage.png"
+import herovin from "../assets/images/hero-vin.png"
+import heroglas from "../assets/images/hero-glas.png"
 import herotext2 from "../assets/images/herotext2.svg";
 import Anmeldelser from "../components/Anmeldelser.astro";
 ---
@@ -24,19 +29,19 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 </div>
     <!-- Image 1 -->
     <div class="md:col-span-6 md:row-span-2 md:row-start-2">
-        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+        <img class="md:object-cover md:w-full md:h-full" src={heroglas.src} alt="">
     </div>
 
     <!-- Image 2 -->
     <div class="md:col-span-6 md:row-span-2 md:col-start-7">
-        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+        <img class="md:object-cover md:w-full md:h-full" src={herovin.src} alt="">
     </div>
 
     <!-- Text og Logo Section -->
     <div class="md:col-span-6">
 		<div class="flex justify-between items-center content-center place-content-center	">
       <h2 class="text-red-600 text-xl sm:text-3xl lg:text-5xl">VIN PÅ ABONNEMENT</h2>
-        <img src={filler.src} alt="Logo" class="w-24 h-24">
+        <img src={logo.src} alt="Logo" class="w-24 h-24">
 		</div>
     </div>
   </section>
@@ -94,7 +99,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 
     <!-- Højre Image -->
     <div class="flex justify-center">
-			<img class="md:object-cover :w-full h-auto" src={filler.src} alt="">
+			<img class="md:object-cover :w-full h-auto" src={bordvin.src} alt="Bord med vinglas">
     </div>
   </div>
 </section>
@@ -115,7 +120,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
     <!-- Venstre Content -->
 	   <div class="flex justify-center">
-			<img class="md:object-cover :w-full h-auto" src={filler.src} alt="">
+			<img class="md:object-cover :w-full h-auto" src={collage.src} alt="Samling af stemningsbilleder">
      </div>
 
     <!-- Højre Content-->

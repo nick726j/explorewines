@@ -4,9 +4,113 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import filler from "../assets/images/filler.png";
+import Card from "../components/Card.astro";
+
+
 ---
 <MainLayout title="Titel">
-	<article class="max-w-screen-xl mx-auto">
-<h1>explorewines</h1>
-	</article>
+	<article class="mx-auto">
+   <h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-12">
+      Rødvinskasse
+    </h1>	
+
+
+</article>
+																		  <!-- Vin display -->
+<section>
+
+<div class=" pt-4">
+  <div class=" mx-auto">
+    <!-- Navigation -->
+    <div class="relative border-b border-gray-300">
+      <!-- Numbers -->
+      <div class="grid grid-cols-4">
+        <div class="text-lg font-medium text-gray-800">NO 1.</div>
+        <div class="text-lg font-medium text-gray-800">NO 2.</div>
+        <div class="text-lg font-medium text-gray-800">NO 3.</div>
+        <div class="text-lg font-medium text-gray-800">NO 4.</div>
+      </div>
+
+      <!-- Active Indicator -->
+      <div class="absolute bottom-0 left-0 w-1/4 border-b-4 border-red-700 transition-transform duration-300"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CARDS -->  
+    <!-- Grid container med 4 kolonner på desktop (md) -->
+    <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
+        
+        <!-- Første Card - Dette skal altid vises -->
+        <Card
+            cardimage="vin-single.png"
+            cardimagealt="Vinflaske"
+            navn="Jongieux Blanc, Vin De Savoie AOC,"
+            land="Frankrig"
+            aarstal="2023"
+        ></Card>
+    <!-- Andet Card - Dette skal altid vises -->
+        <Card
+            cardimage="vin-single.png"
+            cardimagealt="Vinflaske"
+            navn="L A Cruz Vega Roble, Bogarve 1915, DO La Mancha,"
+            land="Spanien"
+            aarstal="2018"
+        ></Card>
+    <!-- Tredje Card - Dette skal altid vises -->
+        <Card
+            cardimage="vin-single.png"
+            cardimagealt="Vinflaske"
+            navn="Escriba Reserva, DOC do Tejo,"
+            land="Portugal"
+            aarstal="2022"
+        ></Card> 
+            <!-- Fjerde Card - Dette skal altid vises -->
+        <Card
+            cardimage="vin-single.png"
+            cardimagealt="Vinflaske"
+            navn="Pinotage Organic Wine By Sophie Germanier,"
+            land="Sydafrika"
+            aarstal="2022"
+        ></Card>      
+    </section>
+    <div class="flex justify-center pt-10">
+      <Button variant="secondary" size="medium" href="">SE DESTINATIONER</Button>
+    </div>
+</section>
+                                                               <!-- Vin beskrivelse tilhører ovenstående -->
+
+
+<section class="bg-red-700 text-white py-16 px-8">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+    <!-- Venstre Content -->
+      <!-- Venstre Content -->
+    <div class="md:col-span-2">
+      <h2 class="text-3xl md:text-4xl leading-tight">
+        LA Cruz Vega Roble, DO <br />
+        La Mancha, Spanien <span class="text-xl font-normal">2018</span>
+      </h2>
+      <div class="mt-4">
+      <Button>Køb nu</Button>
+      </div>
+    </div>
+
+
+    <!-- Højre Content -->
+    <div class="space-y-4 md:col-start-3 md:col-span-3">
+<p class="text-lg leading-relaxed">
+        Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
+      </p>
+</div>
+  </div>
+</section>
+
+
+
+
+
+
+
 </MainLayout>
