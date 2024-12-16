@@ -6,108 +6,221 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import filler from "../assets/images/filler.png";
 import Card from "../components/Card.astro";
+import abonnementkasse from "../assets/images/abonnementkasse.svg";
+import Anmeldelser from "../components/Anmeldelser.astro";
+
+
 
 
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
    <h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-12">
-      Rødvinskasse
+      Vinabonnement
     </h1>	
+<section class="py-16 px-4 md:px-16">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Venstre Image -->
+    <div class="flex justify-center">
+			<img class="md:object-cover :w-full h-auto" src={abonnementkasse.src} alt="kasse og vin">
+    </div>
+    <!-- Højre Content -->
+    <div class="space-y-6">
+      <h2 class="text-4xl md:text-5xl uppercase font-bold leading-tight">
+Rødvinskasse      </h2>
+<div class="flex items-center justify-between">
+      <p class="text-lg md:text-xl leading-relaxed">
+599,- per måned (alt inklusivt)      </p>
+        <a href="/betal"><Button>Køb nu</Button></a>
+</div>
+   <p class="text-lg md:text-xl leading-relaxed">
+Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!      </p>
 
 
-</article>
+         <div class="space-y-4 col-start-4">
+      <h4 class="text-xl font-bold">Detaljer</h4>
+      <ul class="text-lg leading-relaxed">
+        <li>Antal vine pr. kasse: 8 stk.</li>
+        <li>Pris: 599 DKK (alt inklusivt)</li>
+        <li>Leveringsdag: Sidste torsdag i måneden</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
 																		  <!-- Vin display -->
 <section>
+  <div class="pt-4">
+    <div class="mx-auto">
+      <!-- Navigation -->
+      <div class="relative border-b border-gray-300">
+        <!-- Tal indicator -->
+        <div class="grid grid-cols-4">
+          <div
+            class="text-lg font-medium text-gray-800 nav-item"
+            data-target="1"
+          >
+            NO 1.
+          </div>
+          <div
+            class="text-lg font-medium text-gray-800 nav-item"
+            data-target="2"
+          >
+            NO 2.
+          </div>
+          <div
+            class="text-lg font-medium text-gray-800 nav-item"
+            data-target="3"
+          >
+            NO 3.
+          </div>
+          <div
+            class="text-lg font-medium text-gray-800 nav-item"
+            data-target="4"
+          >
+            NO 4.
+          </div>
+        </div>
 
-<div class=" pt-4">
-  <div class=" mx-auto">
-    <!-- Navigation -->
-    <div class="relative border-b border-gray-300">
-      <!-- Numbers -->
-      <div class="grid grid-cols-4">
-        <div class="text-lg font-medium text-gray-800">NO 1.</div>
-        <div class="text-lg font-medium text-gray-800">NO 2.</div>
-        <div class="text-lg font-medium text-gray-800">NO 3.</div>
-        <div class="text-lg font-medium text-gray-800">NO 4.</div>
+        <!-- Aktiv Indicator -->
+        <div
+          id="activeIndicator"
+          class="absolute bottom-0 left-0 w-1/4 border-b-4 border-red-700 transition-transform duration-300"
+        ></div>
       </div>
-
-      <!-- Active Indicator -->
-      <div class="absolute bottom-0 left-0 w-1/4 border-b-4 border-red-700 transition-transform duration-300"></div>
     </div>
   </div>
-</div>
 
-
-<!-- CARDS -->  
-    <!-- Grid container med 4 kolonner på desktop (md) -->
-    <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
-        
-        <!-- Første Card - Dette skal altid vises -->
-        <Card
-            cardimage="vin-single.png"
-            cardimagealt="Vinflaske"
-            navn="Jongieux Blanc, Vin De Savoie AOC,"
-            land="Frankrig"
-            aarstal="2023"
-        ></Card>
-    <!-- Andet Card - Dette skal altid vises -->
-        <Card
-            cardimage="vin-single.png"
-            cardimagealt="Vinflaske"
-            navn="L A Cruz Vega Roble, Bogarve 1915, DO La Mancha,"
-            land="Spanien"
-            aarstal="2018"
-        ></Card>
-    <!-- Tredje Card - Dette skal altid vises -->
-        <Card
-            cardimage="vin-single.png"
-            cardimagealt="Vinflaske"
-            navn="Escriba Reserva, DOC do Tejo,"
-            land="Portugal"
-            aarstal="2022"
-        ></Card> 
-            <!-- Fjerde Card - Dette skal altid vises -->
-        <Card
-            cardimage="vin-single.png"
-            cardimagealt="Vinflaske"
-            navn="Pinotage Organic Wine By Sophie Germanier,"
-            land="Sydafrika"
-            aarstal="2022"
-        ></Card>      
-    </section>
-    <div class="flex justify-center pt-10">
-      <Button variant="secondary" size="medium" href="">SE DESTINATIONER</Button>
+  <!-- CARDS -->
+  <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+    <!-- 1 Card -->
+    <div class="card group" data-card="1">
+      <Card
+        cardimage="vin-single.png"
+        cardimagealt="Vinflaske"
+        navn="Jongieux Blanc, Vin De Savoie AOC,"
+        land="Frankrig"
+        aarstal="2023"
+      ></Card>
     </div>
+
+    <!-- 2 Card -->
+    <div class="card group" data-card="2">
+      <Card
+        cardimage="vin-single.png"
+        cardimagealt="Vinflaske"
+        navn="L A Cruz Vega Roble, Bogarve 1915, DO La Mancha,"
+        land="Spanien"
+        aarstal="2018"
+      ></Card>
+    </div>
+
+    <!-- 3 Card -->
+    <div class="card group" data-card="3">
+      <Card
+        cardimage="vin-single.png"
+        cardimagealt="Vinflaske"
+        navn="Escriba Reserva, DOC do Tejo,"
+        land="Portugal"
+        aarstal="2022"
+      ></Card>
+    </div>
+
+    <!-- 4 Card -->
+    <div class="card group" data-card="4">
+      <Card
+        cardimage="vin-single.png"
+        cardimagealt="Vinflaske"
+        navn="Pinotage Organic Wine By Sophie Germanier,"
+        land="Sydafrika"
+        aarstal="2022"
+      ></Card>
+    </div>
+  </section>
 </section>
+
                                                                <!-- Vin beskrivelse tilhører ovenstående -->
-
-
-<section class="bg-red-700 text-white py-16 px-8">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-    <!-- Venstre Content -->
+  <!-- Dynamisk section  -->
+  <section id="dynamicContent" class="bg-red-700 text-white py-16 px-8">
+    <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
       <!-- Venstre Content -->
-    <div class="md:col-span-2">
-      <h2 class="text-3xl md:text-4xl leading-tight">
-        LA Cruz Vega Roble, DO <br />
-        La Mancha, Spanien <span class="text-xl font-normal">2018</span>
-      </h2>
-      <div class="mt-4">
-      <Button>Køb nu</Button>
+      <div class="md:col-span-2">
+        <h2 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
+          LA Cruz Vega Roble, DO <br />
+          La Mancha, Spanien <span class="text-xl font-normal">2018</span>
+        </h2>
+        <div class="mt-4">
+          <Button>Køb nu</Button>
+        </div>
+      </div>
+
+      <!-- Højre Content -->
+      <div class="space-y-4 md:col-start-3 md:col-span-3">
+        <p id="contentDescription" class="text-lg leading-relaxed">
+          Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
+        </p>
       </div>
     </div>
+  </section>
 
-
-    <!-- Højre Content -->
-    <div class="space-y-4 md:col-start-3 md:col-span-3">
-<p class="text-lg leading-relaxed">
-        Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
-      </p>
-</div>
-  </div>
+<section>
+  <Anmeldelser></Anmeldelser>
 </section>
 
+</article>
 
+<script>
+// Variabler
+const cards = document.querySelectorAll<HTMLDivElement>(".card");
+const navItems = document.querySelectorAll<HTMLDivElement>(".nav-item");
+const activeIndicator = document.getElementById("activeIndicator") as HTMLDivElement;
+  const contentTitle = document.getElementById("contentTitle");
+  const contentDescription = document.getElementById("contentDescription");
+
+ // Content Data (til Cards)
+  const contentData = [
+    {
+      title: "Jongieux Blanc, Vin De Savoie AOC",
+      description: "A delightful French white wine, perfect for elegant dining. Crisp and refreshing.",
+    },
+    {
+      title: "L A Cruz Vega Roble, Bogarve 1915, DO La Mancha",
+      description: "A robust Spanish red wine with hints of dark berries, tobacco, and oak.",
+    },
+    {
+      title: "Escriba Reserva, DOC do Tejo",
+      description: "A Portuguese delight, combining smooth tannins and a fruity aroma.",
+    },
+    {
+      title: "Pinotage Organic Wine By Sophie Germanier",
+      description: "An organic South African wine with deep notes of plum and spice.",
+    },
+  ];
+
+// Tilføj hover listeners to each card
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    const cardIndex = Number(card.dataset.card) - 1; // giver vores cards et nummer så den ved hvilken nummer den skal vise som aktiv
+
+    // ændrer positionen af indicator
+    activeIndicator.style.transform = `translateX(${cardIndex * 100}%)`;
+
+    // Indicatorens visuelle ændring
+    navItems.forEach((nav) => nav.classList.remove("text-red-700", "font-bold"));
+    navItems[cardIndex].classList.add("text-red-700", "font-bold");
+
+    // Update dynamic content
+      contentTitle.textContent = contentData[cardIndex].title;
+      contentDescription.textContent = contentData[cardIndex].description;
+  });
+});
+
+// Initial State: Placerer indicator på første card
+navItems[0].classList.add("text-red-700", "font-bold");
+activeIndicator.style.transform = "translateX(0%)";
+
+</script>
 
 
 
