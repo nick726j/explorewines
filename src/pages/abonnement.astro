@@ -10,6 +10,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 import Card from "../components/Card.astro";
 import Abonnementcard from "../components/Abonnementcard.astro";
 
+
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
@@ -27,8 +28,8 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <!-- 1 Card -->
     <div class="card group" data-card="1">
       <Abonnementcard
-        cardimage="filler.png"
-        cardimagealt="Vinflaske"
+        cardimage="abonnement1.png"
+        cardimagealt="flasker"
         navn="Rødvinskasse"
       ></Abonnementcard>
     </div>
@@ -36,7 +37,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <!-- 2 Card -->
     <div class="card group" data-card="2">
       <Abonnementcard
-        cardimage="filler.png"
+        cardimage="abonnement2.png"
         cardimagealt="Vinflaske"
         navn="Hvidvinskasse"
 
@@ -46,7 +47,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <!-- 3 Card -->
     <div class="card group" data-card="3">
       <Abonnementcard
-        cardimage="vin-single.png"
+        cardimage="abonnement3.png"
         cardimagealt="Vinflaske"
         navn="Mixedkasse"
       ></Abonnementcard>
@@ -56,7 +57,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
   </section>
 </section>
 
-                                                               <!-- Vin beskrivelse tilhører ovenstående -->
+                                                               <!-- Abonnement beskrivelse-->
   <!-- Dynamisk section  -->
   <section id="dynamicContent" class="bg-red-700 text-white py-16 px-8 hidden md:block">
     <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -80,11 +81,30 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     </div>
   </section>
 
+                              <!-- Sektion: Sådan Fungerer Det -->
+<section class=" text-black py-16 px-8">
+  <div class="mx-auto grid md:grid-cols-2">
+    <!-- Overskrift -->
+     <div>
+    <h2 class="text-2xl md:text-4xl font-bold uppercase mb-4">SÅDAN FUNGERER DET</h2>  <p class="text-lg md:text-xl text-black">
+      Vores vinabonnementskoncept er simpelt: Bestil din fortrukne vinkasse og få den leveret til døren fast hver måned. 
+      Ønsker du at pause eller afmelde dit abonnement, skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
+    </p>
+    </div>
+  </div>
+          <img class="md:object-cover md:w-full md:h-full" src={stepbystep.src} alt="">
+
+
+  </div>
+</section> 
+
+
+															    <!--  ANMELDELSER -->
+
 <section>
   <Anmeldelser></Anmeldelser>
 </section>
 
-</article>
 
 <script>
 // Variabler
@@ -137,10 +157,7 @@ navItems[0].classList.add("text-red-700", "font-bold");
 activeIndicator.style.transform = "translateX(0%)";
 
 </script>
-															    <!--  ANMELDELSER -->
 
-
-<Anmeldelser></Anmeldelser>
 
 	</article>
 </MainLayout>

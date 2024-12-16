@@ -7,12 +7,19 @@ import Link from '../components/Link.astro';
 
 <section class="py-16 px-8">
   <div class="mx-auto space-y-8">
-    <!-- Heading -->
-    <div class="flex justify-between items-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">VORES MEDLEMMER SIGER...</h2>
-    <Button>Se Trustpilot</Button>
-    </div>
+ <!-- Top Sektion: Navigation og Titel -->
+    <div class="flex justify-between items-center mb-8">
+      <!-- Piletaster -->
+      <div class="flex gap-4">
+  <Button variant="secondary"></Button>
+  <Button></Button>
+      </div>
+      <!-- Titel -->
+      <h2 class="text-2xl md:text-3xl font-semibold">Vinflasker</h2>
+      <!-- Vinshop Knap -->
+                     <a href="/"><Button>Se Trustpilot</Button></a>
 
+    </div>
 
       <!-- Review Items -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
