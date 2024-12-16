@@ -7,6 +7,8 @@ import filler from "../assets/images/filler.png";
 import stepbystep from "../assets/images/stepbystep.svg"
 import stepbystepmobile from "../assets/images/stepbystepmobile.svg"
 import Anmeldelser from "../components/Anmeldelser.astro";
+import Card from "../components/Card.astro";
+import Abonnementcard from "../components/Abonnementcard.astro";
 
 ---
 <MainLayout title="Titel">
@@ -20,77 +22,121 @@ import Anmeldelser from "../components/Anmeldelser.astro";
       VINABONNEMENT
     </h1>
 
-    <!-- Grid Container -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- RØDVIN LAV OM TIL CARDS-->
-      <div class="text-center space-y-4">
-        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
-        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
-        </div>
-        <p class="text-lg font-medium text-gray-800">Rødvinskasse</p>
-      </div>
-
-      <!-- HVIDVIN LAV OM TIL CARDS-->
-      <div class="text-center space-y-4">
-        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
-        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
-        </div>
-        <p class="text-lg font-medium text-gray-800">Hvidvinskasse</p>
-      </div>
-
-      <!-- MIX LAV OM TIL CARDS-->
-      <div class="text-center space-y-4">
-        <div class="border border-gray-400 aspect-w-3 aspect-h-4">
-        <img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
-        </div>
-        <p class="text-lg font-medium text-gray-800">Mixed kasse</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-															    <!-- VINABONNEMENTER DISPLAY -->
-
-<section class="bg-red-700 text-white py-16 px-8">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-    <!-- Venstre Content -->
-    <div class="md:col-span-2 space-y-6">
-      <h3 class="text-2xl md:text-3xl font-bold">
-        Denne måneds vinkasser
-      </h3>
-      <p class="text-lg leading-relaxed">
-        Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned.
-        Du kan forvente gardiner, garvesyre og gourmetinspiration – og så kan du forvente vin
-        til enhver lejlighed. Kassen sammensættes, så der både er gode hverdagsvine til et
-        velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du
-        skænker den for dine venner.
-      </p>
-   <Button>Køb nu</Button>
+    <!-- CARDS -->
+  <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    <!-- 1 Card -->
+    <div class="card group" data-card="1">
+      <Abonnementcard
+        cardimage="filler.png"
+        cardimagealt="Vinflaske"
+        navn="Rødvinskasse"
+      ></Abonnementcard>
     </div>
 
-    <!-- Højre Content -->
-    <div class="space-y-4 col-start-4">
-      <h4 class="text-xl font-bold">Detaljer</h4>
-      <ul class="text-lg leading-relaxed">
-        <li>Antal vine pr. kasse: 8 stk.</li>
-        <li>Pris: 599 DKK (alt inklusivt)</li>
-        <li>Leveringsdag: Sidste torsdag i måneden</li>
-      </ul>
+    <!-- 2 Card -->
+    <div class="card group" data-card="2">
+      <Abonnementcard
+        cardimage="filler.png"
+        cardimagealt="Vinflaske"
+        navn="Hvidvinskasse"
+
+      ></Abonnementcard>
     </div>
-  </div>
+
+    <!-- 3 Card -->
+    <div class="card group" data-card="3">
+      <Abonnementcard
+        cardimage="vin-single.png"
+        cardimagealt="Vinflaske"
+        navn="Mixedkasse"
+      ></Abonnementcard>
+    </div>
+
+    </div>
+  </section>
 </section>
 
-<section class="">
-	<div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-	     <h2 class="text-xl tracking-wide">Sådan fungerer det</h2>
-      <p class="text-lg md:text-xl leading-relaxed row-start-2">
-Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.      </p>
-</div>
-<img class="block md:hidden" src={stepbystepmobile.src}alt="step by step">
-<img class="md:block hidden" src={stepbystep.src}alt="step by step">
+                                                               <!-- Vin beskrivelse tilhører ovenstående -->
+  <!-- Dynamisk section  -->
+  <section id="dynamicContent" class="bg-red-700 text-white py-16 px-8 hidden md:block">
+    <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+      <!-- Venstre Content -->
+      <div class="md:col-span-2">
+        <h2 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
+          LA Cruz Vega Roble, DO <br />
+          La Mancha, Spanien <span class="text-xl font-normal">2018</span>
+        </h2>
+        <div class="mt-4">
+          <Button>Køb nu</Button>
+        </div>
+      </div>
+
+      <!-- Højre Content -->
+      <div class="space-y-4 md:col-start-3 md:col-span-3">
+        <p id="contentDescription" class="text-lg leading-relaxed">
+          Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section>
+  <Anmeldelser></Anmeldelser>
 </section>
 
+</article>
 
+<script>
+// Variabler
+const cards = document.querySelectorAll<HTMLDivElement>(".card");
+const navItems = document.querySelectorAll<HTMLDivElement>(".nav-item");
+const activeIndicator = document.getElementById("activeIndicator") as HTMLDivElement;
+  const contentTitle = document.getElementById("contentTitle");
+  const contentDescription = document.getElementById("contentDescription");
+
+ // Content Data (til Cards)
+  const contentData = [
+    {
+      title: "Jongieux Blanc, Vin De Savoie AOC",
+      description: "A delightful French white wine, perfect for elegant dining. Crisp and refreshing.",
+    },
+    {
+      title: "L A Cruz Vega Roble, Bogarve 1915, DO La Mancha",
+      description: "A robust Spanish red wine with hints of dark berries, tobacco, and oak.",
+    },
+    {
+      title: "Escriba Reserva, DOC do Tejo",
+      description: "A Portuguese delight, combining smooth tannins and a fruity aroma.",
+    },
+    {
+      title: "Pinotage Organic Wine By Sophie Germanier",
+      description: "An organic South African wine with deep notes of plum and spice.",
+    },
+  ];
+
+// Tilføj hover listeners to each card
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    const cardIndex = Number(card.dataset.card) - 1; // giver vores cards et nummer så den ved hvilken nummer den skal vise som aktiv
+
+    // ændrer positionen af indicator
+    activeIndicator.style.transform = `translateX(${cardIndex * 100}%)`;
+
+    // Indicatorens visuelle ændring
+    navItems.forEach((nav) => nav.classList.remove("text-red-700", "font-bold"));
+    navItems[cardIndex].classList.add("text-red-700", "font-bold");
+
+    // Update dynamic content
+      contentTitle.textContent = contentData[cardIndex].title;
+      contentDescription.textContent = contentData[cardIndex].description;
+  });
+});
+
+// Initial State: Placerer indicator på første card
+navItems[0].classList.add("text-red-700", "font-bold");
+activeIndicator.style.transform = "translateX(0%)";
+
+</script>
 															    <!--  ANMELDELSER -->
 
 
