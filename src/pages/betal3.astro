@@ -7,6 +7,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import betaltegning from "../assets/images/betaltegning.svg";
 ---
 <MainLayout title="Titel">
+
 <!-- Købsflow Side -->
 <section class="text-black px-8">
   <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
@@ -24,54 +25,80 @@ import betaltegning from "../assets/images/betaltegning.svg";
 
         <!-- Titel -->
         <h2 class="text-xl md:text-3xl font-bold text-red-700 mb-6">
-          KONTAKTOPLYSNINGER <span class="text-xs sm:text-sm text-black float-right">Trin 2/3</span>
+          ADRESSE <span class="text-xs sm:text-sm text-black float-right">Trin 3/3</span>
         </h2>
 
         <!-- Formular -->
         <form>
-          <!-- Fulde Navn -->
+          <!-- Adresse -->
           <div class="mb-6 text-left">
-            <label for="fullName" class="block text-gray-700 font-medium mb-2">Fulde navn</label>
+            <label for="address" class="block text-gray-700 font-medium mb-2">Adresse</label>
             <input
               type="text"
-              id="fullName"
-              placeholder="Indtast dit fulde navn..."
+              id="address"
+              placeholder="Indtast din adresse..."
               class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
 
-          <!-- E-mail -->
+          <!-- Postnummer -->
           <div class="mb-6 text-left">
-            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+            <label for="zip" class="block text-gray-700 font-medium mb-2">Postnummer</label>
             <input
-              type="email"
-              id="email"
-              placeholder="Indtast din email-adresse..."
+              type="number"
+              id="zip"
+              placeholder="Indtast dit postnummer"
               class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
           </div>
 
-          <!-- Telefonnummer -->
-          <div class="mb-8 text-left">
-            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefonnummer</label>
+          <!-- By -->
+          <div class="mb-6 text-left">
+            <label for="city" class="block text-gray-700 font-medium mb-2">By</label>
             <input
-              type="tel"
-              id="phone"
-              placeholder="Indtast dit telefon nummer..."
+              type="text"
+              id="city"
+              placeholder="Indtast din by..."
               class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
             />
+          </div>
+
+          <!-- Checkbox 1 -->
+          <div class="flex items-start mb-4">
+            <input
+              type="checkbox"
+              id="confirmInfo"
+              class="mt-1 w-5 h-5 text-red-700 border-gray-300 focus:ring-red-500"
+            />
+            <label for="confirmInfo" class="ml-3 text-gray-700">
+              Jeg har sikret mig at ovenstående information er 100% korrekte.
+            </label>
+          </div>
+
+          <!-- Checkbox 2 -->
+          <div class="flex items-start mb-8">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              class="mt-1 w-5 h-5 text-red-700 border-gray-300 focus:ring-red-500"
+            />
+            <label for="privacyPolicy" class="ml-3 text-gray-700">
+              Jeg har læst jeres privatpolitik og generelle bestemmelser og er indforstået med begge.
+            </label>
           </div>
         </form>
-          <!-- Knapper -->
+        <!-- Knapper -->
           <div class="flex justify-center gap-4">
             <!-- Tilbage Knap -->
-            <a href="/betal">
+            <a href="/betal2">
               <Button variant="secondary"></Button>
             </a>
+
             <!-- Næste Knap -->
-            <a href="/betal3"><Button>Næste</Button></a>
+            <a href="/tak">
+              <Button>Næste</Button>
+            </a>
           </div>
-          
       </div>
     </div>
   </div>

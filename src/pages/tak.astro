@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import betaltegning from "../assets/images/betaltegning.svg";
+import taktegning from "../assets/images/taktegning.svg";
+---
+<MainLayout title="Titel">
+
+<!-- Købsflow Side -->
+<section class="text-black px-8">
+  <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
+    <!-- Venstre Illustration -->
+    <div class="hidden md:block md:col-span-2 items-center	">
+      <div class="relative h-full border-r border-black">
+        <!-- Illustration -->
+    <img class="md:object-cover :w-full h-auto" src={taktegning.src} alt="kasse og vin">
+      </div>
+    </div>
+
+    <!-- Højre Indhold -->
+         <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
+  <div class="border border-black p-6 md:p-12 inline-block text-center">
+
+    <!-- Titel -->
+    <h2 class="text-xl md:text-3xl font-bold text-red-700 mb-6">
+      TAK FOR DIN BESTILLING
+    </h2>
+
+
+      <!-- Overskrift -->
+      <p class="text-xl mb-6">
+        Kære <span class="font-medium">[ Kundens navn ]</span>,
+      </p>
+
+      <!-- Hovedtekst -->
+      <p class="text-lg leading-relaxed mb-6">
+        Velkommen til vores vinklub. Dit abonnement er bekræftet, og du vil indenfor få minutter modtage en mail 
+        med en oversigt over dit køb. Du modtager vinen inden for 
+        <strong>7 arbejdsdage</strong>, og du har allerede nu fuld adgang til alle de fordele og funktioner, vi tilbyder.
+      </p>
+
+      <!-- Ekstra Besked -->
+      <p class="text-lg leading-relaxed mb-8">
+        Kan du ikke få nok af vin? Udforsk vores vinshop via knappen nedenfor.
+      </p>
+
+<!-- Knapper -->
+<div class="flex justify-center gap-4">
+  <!-- Tilbage Knap -->
+  <a href="javascript:history.back()">
+  <Button variant="secondary"></Button>
+</a>
+
+
+  <!-- Næste Knap -->
+  <a href="/">
+    <Button>Shop videre</Button>
+  </a>
+</div>
+
+  </div>
+</div>
+
+</section>
+
+
+</MainLayout>

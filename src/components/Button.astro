@@ -1,15 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 import buttonarrow from "../assets/images/buttonarrow.svg"
+const { variant = "primary" } = Astro.props;
+
+const buttonStyling =
+  "border border-black py-1.5 px-3 md:py-2 md:px-4 text-xs md:text-base rounded-3xl inline-flex flex-nowrap items-center gap-2 justify-between hover:bg-black hover:text-white transition-colors duration-150";
 ---
 <div>
   <button
-    class="border border-black py-1.5 px-3 md:py-2 md:px-4 text-xs md:text-base rounded-3xl inline-flex flex-nowrap items-center gap-2 justify-between hover:bg-black hover:text-white transition-colors duration-150"
+    class={`${buttonStyling}`}
     aria-label="Navigate to next page"
   >
-   <slot class=""></slot>
+    <slot></slot>
+    <!-- SVG med rotation til secondary -->
     <svg
-      class="w-4 h-4 md:w-6 md:h-6"
+      class={`w-4 h-4 md:w-6 md:h-6 transition-transform duration-150 ${variant === "secondary" ? "rotate-180" : ""}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 13 8"
     >

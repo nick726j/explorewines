@@ -15,6 +15,14 @@ import herovin from "../assets/images/hero-vin.png"
 import heroglas from "../assets/images/hero-glas.png"
 import herotext2 from "../assets/images/herotext2.svg";
 import Anmeldelser from "../components/Anmeldelser.astro";
+import tegning1 from "../assets/images/tegning1.svg"
+import tegning2 from "../assets/images/tegning2.svg"
+import tegning3 from "../assets/images/tegning3.svg"
+import vin1 from "../assets/images/vin1.png"
+import vin2 from "../assets/images/vin2.png"
+import vin3 from "../assets/images/vin3.png"
+import vin4 from "../assets/images/vin4.png"
+import vin5 from "../assets/images/vin5.png"
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
@@ -50,7 +58,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 
   															<!-- Abonnenter section -->
 
-<section class="bg-red-700 text-white py-16 px-4">
+<section class=" text-black py-16 px-4">
   <!-- Heading -->
   <div class="mx-auto">
     <h2 class="text-4xl pb-8">
@@ -60,22 +68,116 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   <!-- Abonnenter -->
   <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
     <div class="">
-	<img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+	<img class="md:object-cover md:w-full md:h-full" src={tegning1.src} alt="">
       <p class="">Rødvinskasse</p>
+            <a href="/rodwin"><Button>Køb nu</Button></a>
     </div>
     <div class="">
-			<img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
+			<img class="md:object-cover md:w-full md:h-full" src={tegning2.src} alt="">
       <p class="">Hvidvinskasse</p>
+                  <a href="/rodwin"><Button>Køb nu</Button></a>
+
     </div>
     <div class="">
-			<img class="md:object-cover md:w-full md:h-full" src={filler.src} alt="">
-
+			<img class="md:object-cover md:w-full md:h-full" src={tegning3.src} alt="">
       <p class="">Mixed kasse</p>
+                  <a href="/rodwin"><Button>Køb nu</Button></a>
+
     </div>
   </div>
 </section>
 
-  																<!-- Vinklub section -->
+  																
+  																<!-- Shop section -->
+<!-- Vinsektion -->
+<section class=" text-black py-12 ">
+  <div class="mx-auto">
+    <!-- Top Sektion: Navigation og Titel -->
+    <div class="flex justify-between items-center mb-8">
+      <!-- Piletaster -->
+      <div class="flex gap-4">
+  <Button variant="secondary"></Button>
+  <Button></Button>
+      </div>
+      <!-- Titel -->
+      <h2 class="text-2xl md:text-3xl font-semibold">Vinflasker</h2>
+      <!-- Vinshop Knap -->
+                     <a href="/"><Button>Gå til shop</Button></a>
+
+    </div>
+
+    <!-- Produkt Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <!-- Produkt 1 -->
+      <div class="text-center">
+        <img
+          src={vin1.src}
+          alt="Jongieux Blanc"
+          class="mx-auto mb-4"
+        />
+        <h3 class="text-sm md:text-base font-medium">
+          2023 Jongieux Blanc, Vin De Savoie AOC, Frankrig
+        </h3>
+        <p class="text-gray-700">450 DKK (6 stk.)</p>
+      </div>
+
+      <!-- Produkt 2 -->
+      <div class="text-center">
+        <img
+          src={vin2.src}
+          alt="Ikon Alvarinho"
+          class="mx-auto mb-4"
+        />
+        <h3 class="text-sm md:text-base font-medium">
+          2020 Ikon, Alvarinho, Fiuza, Tejo, Portugal
+        </h3>
+        <p class="text-gray-700">1074 DKK (6 stk.)</p>
+      </div>
+
+      <!-- Produkt 3 -->
+      <div class="text-center">
+        <img
+          src={vin3.src}
+          alt="Canallas Vino Blanco"
+          class="mx-auto mb-4"
+        />
+        <h3 class="text-sm md:text-base font-medium">
+          2023 Canallas Vino Blanco, Valencia DOP, Spanien
+        </h3>
+        <p class="text-gray-700">450 DKK (6 stk.)</p>
+      </div>
+
+      <!-- Produkt 4 -->
+      <div class="text-center">
+        <img
+          src={vin4.src}
+          alt="Vin d'Orange"
+          class="mx-auto mb-4"
+        />
+        <h3 class="text-sm md:text-base font-medium">
+          2023 Vin d'Orange, DR, Frankrig
+        </h3>
+        <p class="text-gray-700">659 DKK (6 stk.)</p>
+      </div>
+
+      <!-- Produkt 5 -->
+      <div class="text-center">
+        <img
+          src={vin5.src}
+          alt="Zolla Salice Salentino"
+          class="mx-auto mb-4"
+        />
+        <h3 class="text-sm md:text-base font-medium">
+          2021 Zolla, Salice Salentino DOP, Italien
+        </h3>
+        <p class="text-gray-700">450 DKK (6 stk.)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Vinklub section -->
 
 <section class="py-16 px-4 md:px-16">
   <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
@@ -103,18 +205,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     </div>
   </div>
 </section>
-  																<!-- Shop section -->
-<section class="py-16 px-8">
-  <div class="mx-auto">
-    <!-- Header -->
-    <div class="flex justify-between items-center mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
-        Vinflasker
-      </h2>
-	  <Button>Bliv abonnent</Button>
 
-    
-    </div>
   																<!-- Nyhedsbrev section -->
 												<section class="py-16 px-8 md:px-16">
   <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
