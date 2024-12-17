@@ -40,14 +40,14 @@ export default {
     customProperties: {
       "font-family-title": "neue-haas-grotesk-display",
       "font-family-body": "neue-haas-grotesk-display",
-      "font-weight-500": "regular",
-      "font-weight-600": "bold",
+      "font-weight-500": "roman",
+      "font-weight-600": "medium",
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
     fontWeight: {
-      regular: "500",
-      bold: "600",
+      roman: "500",
+      medium: "600",
     },
 
     /* Borders - borderstørrelser herunder */
