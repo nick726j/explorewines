@@ -12,19 +12,19 @@ import Abonnementcard from "../components/Abonnementcard.astro";
 
 
 ---
-<MainLayout title="Titel">
+<MainLayout title="Vinabonnement">
 	<article class="mx-auto">
 
 															    <!-- VINABONNEMENTER DISPLAY -->
-<section class=" py-16 px-8">
+<section class=" px-8">
   <div class="mx-auto">
 
-    <h1 class="text-3xl md:text-4xl font-bold text-red-600 mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-red-600">
       VINABONNEMENT
     </h1>
 
     <!-- CARDS -->
-  <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+  <section class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
     <!-- 1 Card -->
     <div class="card group" data-card="1">
       <Abonnementcard
@@ -59,25 +59,29 @@ import Abonnementcard from "../components/Abonnementcard.astro";
 
                                                                <!-- Abonnement beskrivelse-->
   <!-- Dynamisk section  -->
-  <section id="dynamicContent" class="bg-red-700 text-white py-16 px-8 hidden md:block">
+  <section id="dynamicContent" class="bg-red-700 text-white py-8 px-8 hidden md:block">
     <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
       <!-- Venstre Content -->
-      <div class="md:col-span-2">
+      <div class="md:col-span-3">
         <h2 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
-          LA Cruz Vega Roble, DO <br />
-          La Mancha, Spanien <span class="text-xl font-normal">2018</span>
+    Rødvinskasse
         </h2>
+          <p id="contentDescription" class="text-lg leading-relaxed">
+Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!        </p>
+    
         <div class="mt-4">
           <Button>Køb nu</Button>
         </div>
       </div>
 
       <!-- Højre Content -->
-      <div class="space-y-4 md:col-start-3 md:col-span-3">
-        <p id="contentDescription" class="text-lg leading-relaxed">
-          Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
-        </p>
+      <div class=" md:col-start-5 md:col-span-3">
+        <h4>Detajler</h4>
+        <p>Antal vine pr. kasse: 8 stk. <br>
+Pris: 599 DKK (alt inklusivt) <br>
+Leveringsdag: Sidste torsdag i måneden </p>
       </div>
+
     </div>
   </section>
 
@@ -92,7 +96,9 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     </p>
     </div>
   </div>
-          <img class="md:object-cover md:w-full md:h-full" src={stepbystep.src} alt="">
+          <img class="hidden md:block md:object-cover md:w-full md:h-full" src={stepbystep.src} alt="">
+                    <img class="block md:hidden md:object-cover md:w-full md:h-full" src={stepbystepmobile.src} alt="">
+
 
 
   </div>
@@ -107,56 +113,43 @@ import Abonnementcard from "../components/Abonnementcard.astro";
 
 
 <script>
-// Variabler
-const cards = document.querySelectorAll<HTMLDivElement>(".card");
-const navItems = document.querySelectorAll<HTMLDivElement>(".nav-item");
-const activeIndicator = document.getElementById("activeIndicator") as HTMLDivElement;
+  // Variabler
+  const cards = document.querySelectorAll(".card");
   const contentTitle = document.getElementById("contentTitle");
   const contentDescription = document.getElementById("contentDescription");
 
- // Content Data (til Cards)
+  // Content Data (til Cards)
   const contentData = [
     {
-      title: "Jongieux Blanc, Vin De Savoie AOC",
-      description: "A delightful French white wine, perfect for elegant dining. Crisp and refreshing.",
+      title: "Rødvinskasse",
+      description:
+        "Vores RødvinTag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!skasse giver dig en nøje udvalgt samling af de bedste røde vine fra hele verden.",
     },
     {
-      title: "L A Cruz Vega Roble, Bogarve 1915, DO La Mancha",
-      description: "A robust Spanish red wine with hints of dark berries, tobacco, and oak.",
+      title: "Hvidvinskasse",
+      description:
+        "Udforsk en verden af smag med fire unikke hvidvine fra forskellige hjørner af kloden. Nyd den livlige Chenin Blanc fra Sydafrikas Coastal Region, den blomstrede Torrontés fra Mendoza i Argentina, den delikate Riesling Spätlese Trocken fra Rheinhessen i Tyskland og den friske Verdejo fra Spaniens DO La Mancha. Denne hvidvinskasse er ideel til en smagfuld oplevelse eller som et eksklusivt indslag på din vinreol!",
     },
     {
-      title: "Escriba Reserva, DOC do Tejo",
-      description: "A Portuguese delight, combining smooth tannins and a fruity aroma.",
-    },
-    {
-      title: "Pinotage Organic Wine By Sophie Germanier",
-      description: "An organic South African wine with deep notes of plum and spice.",
+      title: "Mixedkasse",
+      description:
+        "Tag på en smagsrejse med otte udsøgte vine fra hele verden. Nyd frugtig Syrah, elegant Tempranillo, fyldig Touriga Nacional og klassisk Pinotage blandt rødvinene. Fra hvidvinsudvalget venter livlig Chenin Blanc, aromatisk Torrontés, delikat Riesling og sprød Verdejo. En oplagt mulighed for at udforske nye smagsoplevelser eller tilføje et sofistikeret touch til din vinreol!",
     },
   ];
 
-// Tilføj hover listeners to each card
+  // Tilføj hover listeners til hvert card
 cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    const cardIndex = Number(card.dataset.card) - 1; // giver vores cards et nummer så den ved hvilken nummer den skal vise som aktiv
+  const cardElement = card as HTMLElement; // Typecast til HTMLElement
+  cardElement.addEventListener("mouseenter", () => {
+    const cardIndex = Number(cardElement.dataset.card) - 1; // Hent kortets indeks
 
-    // ændrer positionen af indicator
-    activeIndicator.style.transform = `translateX(${cardIndex * 100}%)`;
-
-    // Indicatorens visuelle ændring
-    navItems.forEach((nav) => nav.classList.remove("text-red-700", "font-bold"));
-    navItems[cardIndex].classList.add("text-red-700", "font-bold");
-
-    // Update dynamic content
-      contentTitle.textContent = contentData[cardIndex].title;
-      contentDescription.textContent = contentData[cardIndex].description;
+    // Opdater dynamisk indhold
+    contentTitle.textContent = contentData[cardIndex].title;
+    contentDescription.textContent = contentData[cardIndex].description;
   });
 });
-
-// Initial State: Placerer indicator på første card
-navItems[0].classList.add("text-red-700", "font-bold");
-activeIndicator.style.transform = "translateX(0%)";
-
 </script>
+
 
 
 	</article>
