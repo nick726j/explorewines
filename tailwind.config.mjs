@@ -31,6 +31,10 @@ export default {
       s: "0.9rem",
       m: "1.4rem",
       l: "1.6rem",
+
+      xsmb: "0.4rem",
+      smb: "0.6rem",
+      mmb: "0.9rem",
     },
 
     customProperties: {
@@ -41,9 +45,10 @@ export default {
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
-    //   fontWeight: {
-    //     regular: '400',
-    //   },
+    fontWeight: {
+      regular: "500",
+      bold: "600",
+    },
 
     /* Borders - borderstørrelser herunder */
     // borderWidth: {
