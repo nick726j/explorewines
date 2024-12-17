@@ -15,7 +15,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
-   <h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-12">
+   <h1 class="uppercase mb-12">
       Vinabonnement
     </h1>	
 <section class="py-16 px-4 md:px-16">
@@ -26,20 +26,20 @@ import Anmeldelser from "../components/Anmeldelser.astro";
     </div>
     <!-- Højre Content -->
     <div class="space-y-6">
-      <h2 class="text-4xl md:text-5xl uppercase font-bold leading-tight">
+      <h2 class="uppercase leading-tight">
 Rødvinskasse      </h2>
 <div class="flex items-center justify-between">
-      <p class="text-lg md:text-xl leading-relaxed">
-599,- per måned (alt inklusivt)      </p>
+      <h4 class="leading-relaxed">
+599,- per måned (alt inklusivt)      </h4>
         <a href="/betal"><Button>Køb nu</Button></a>
 </div>
-   <p class="text-lg md:text-xl leading-relaxed">
+   <p class="text-smb md:text-m leading-relaxed">
 Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!      </p>
 
 
          <div class="space-y-4 col-start-4">
       <h4 class="text-xl font-bold">Detaljer</h4>
-      <ul class="text-lg leading-relaxed">
+      <ul class="text-smb md:text-m leading-relaxed">
         <li>Antal vine pr. kasse: 8 stk.</li>
         <li>Pris: 599 DKK (alt inklusivt)</li>
         <li>Leveringsdag: Sidste torsdag i måneden</li>
@@ -58,25 +58,25 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
         <!-- Tal indicator -->
         <div class="grid grid-cols-4">
           <div
-            class="text-lg font-medium text-gray-800 nav-item"
+            class="text-[2rem] font-medium nav-item"
             data-target="1"
           >
             NO 1.
           </div>
           <div
-            class="text-lg font-medium text-gray-800 nav-item"
+            class="text-[2rem] font-medium text-gray-800 nav-item"
             data-target="2"
           >
             NO 2.
           </div>
           <div
-            class="text-lg font-medium text-gray-800 nav-item"
+            class="text-[2rem] font-medium text-gray-800 nav-item"
             data-target="3"
           >
             NO 3.
           </div>
           <div
-            class="text-lg font-medium text-gray-800 nav-item"
+            class="text-[2rem] font-medium text-gray-800 nav-item"
             data-target="4"
           >
             NO 4.
@@ -110,7 +110,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
       <Card
         cardimage="vin-single.png"
         cardimagealt="Vinflaske"
-        navn="L A Cruz Vega Roble, Bogarve 1915, DO La Mancha,"
+        navn="L A Cruz Vega Roble, Bogarve,"
         land="Spanien"
         aarstal="2018"
       ></Card>
@@ -132,7 +132,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
       <Card
         cardimage="vin-single.png"
         cardimagealt="Vinflaske"
-        navn="Pinotage Organic Wine By Sophie Germanier,"
+        navn="Pinotage Organic Wine By Sophie,"
         land="Sydafrika"
         aarstal="2022"
       ></Card>

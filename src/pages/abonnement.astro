@@ -8,7 +8,7 @@ import stepbystep from "../assets/images/stepbystep.svg"
 import stepbystepmobile from "../assets/images/stepbystepmobile.svg"
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Card from "../components/Card.astro";
-import Abonnementcard from "../components/Abonnementcard.astro";
+import Abonnementcard from "../components/abonnementcard.astro";
 
 
 ---
@@ -16,10 +16,10 @@ import Abonnementcard from "../components/Abonnementcard.astro";
 	<article class="mx-auto">
 
 															    <!-- VINABONNEMENTER DISPLAY -->
-<section class=" px-8">
+<section class="">
   <div class="mx-auto">
 
-    <h1 class="text-3xl md:text-4xl font-bold text-red-600">
+    <h1 class="text-3xl md:text-4xl font-bold">
       VINABONNEMENT
     </h1>
 
@@ -63,10 +63,10 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
       <!-- Venstre Content -->
       <div class="md:col-span-3">
-        <h2 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
-    Rødvinskasse
-        </h2>
-          <p id="contentDescription" class="text-lg leading-relaxed">
+        <h3 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
+    Denne måneds rødvinskasse
+        </h3>
+          <p id="contentDescription" class="text-mmb md:text-l leading-relaxed">
 Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!        </p>
     
         <div class="mt-4">
@@ -77,7 +77,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
       <!-- Højre Content -->
       <div class=" md:col-start-5 md:col-span-3">
         <h4>Detajler</h4>
-        <p>Antal vine pr. kasse: 8 stk. <br>
+        <p class="text-smb md:text-m">Antal vine pr. kasse: 8 stk. <br>
 Pris: 599 DKK (alt inklusivt) <br>
 Leveringsdag: Sidste torsdag i måneden </p>
       </div>
@@ -90,7 +90,7 @@ Leveringsdag: Sidste torsdag i måneden </p>
   <div class="mx-auto grid md:grid-cols-2">
     <!-- Overskrift -->
      <div>
-    <h2 class="text-2xl md:text-4xl font-bold uppercase mb-4">SÅDAN FUNGERER DET</h2>  <p class="text-lg md:text-xl text-black">
+    <h2 class="text-2xl md:text-4xl font-bold uppercase mb-4">SÅDAN FUNGERER DET</h2>  <p class="text-mmb md:text-m">
       Vores vinabonnementskoncept er simpelt: Bestil din fortrukne vinkasse og få den leveret til døren fast hver måned. 
       Ønsker du at pause eller afmelde dit abonnement, skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
     </p>
