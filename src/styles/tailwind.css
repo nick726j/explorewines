@@ -30,11 +30,11 @@
     @apply font-roman;
   }
   h4 {
-    @apply text-[1.5rem];
+    @apply text-[1.9rem];
     @apply font-roman;
   }
   h5 {
-    @apply text-[1.3rem];
+    @apply text-[1.5rem];
     @apply font-roman;
   }
   @media (max-width: 639px) {
