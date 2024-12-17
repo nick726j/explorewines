@@ -20,23 +20,25 @@
   }
   h1 {
     @apply text-[4.5rem];
-    @apply font-roman;
+    @apply font-medium;
+    @apply uppercase;
   }
   h2 {
     @apply text-[3.4rem];
-    @apply font-roman;
+    @apply font-medium;
+    @apply uppercase;
   }
   h3 {
     @apply text-[2.9rem];
-    @apply font-medium;
+    @apply font-roman;
   }
   h4 {
     @apply text-[1.9rem];
-    @apply font-medium;
+    @apply font-roman;
   }
   h5 {
     @apply text-[1.5rem];
-    @apply font-medium;
+    @apply font-roman;
   }
   @media (max-width: 639px) {
     /* Mobil: Under sm-breakpoint (640px) */
@@ -52,23 +54,25 @@
     }
     h1 {
       @apply text-[1.7rem];
-      @apply font-roman;
+      @apply font-medium;
+      @apply uppercase;
     }
     h2 {
       @apply text-[1.4rem];
-      @apply font-roman;
+      @apply font-medium;
+      @apply uppercase;
     }
     h3 {
       @apply text-[1.2rem];
-      @apply font-medium;
+      @apply font-roman;
     }
     h4 {
       @apply text-[0.9rem];
-      @apply font-medium;
+      @apply font-roman;
     }
     h5 {
       @apply text-[0.7rem];
-      @apply font-medium;
+      @apply font-roman;
     }
   }
 }
