@@ -6,10 +6,10 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import betaltegning from "../assets/images/betaltegning.svg";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Step 3/3">
 
 <!-- Købsflow Side -->
-<section class="text-black px-8">
+<section class="text-black">
   <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
     <!-- Venstre Illustration -->
     <div class="hidden md:block md:col-span-2 items-center">
@@ -24,15 +24,16 @@ import betaltegning from "../assets/images/betaltegning.svg";
       <div class="border border-black p-6 md:p-12 inline-block w-full">
 
         <!-- Titel -->
-        <h2 class="text-xl md:text-3xl font-bold text-red-700 mb-6">
-          ADRESSE <span class="text-xs sm:text-sm text-black float-right">Trin 3/3</span>
-        </h2>
+        <div class="mb-6 flex justify-between items-center">
+          <h3>ADRESSE</h3>
+          <p class="text-mmb md:text-m">Trin 3/3</p>
+        </div>
 
         <!-- Formular -->
         <form>
           <!-- Adresse -->
           <div class="mb-6 text-left">
-            <label for="address" class="block text-gray-700 font-medium mb-2">Adresse</label>
+            <label for="address" class="block text-mmb md:text-m mb-2">Adresse</label>
             <input
               type="text"
               id="address"
@@ -43,7 +44,7 @@ import betaltegning from "../assets/images/betaltegning.svg";
 
           <!-- Postnummer -->
           <div class="mb-6 text-left">
-            <label for="zip" class="block text-gray-700 font-medium mb-2">Postnummer</label>
+            <label for="zip" class="block text-mmb md:text-m mb-2">Postnummer</label>
             <input
               type="number"
               id="zip"
@@ -54,7 +55,7 @@ import betaltegning from "../assets/images/betaltegning.svg";
 
           <!-- By -->
           <div class="mb-6 text-left">
-            <label for="city" class="block text-gray-700 font-medium mb-2">By</label>
+            <label for="city" class="block text-mmb md:text-m mb-2">By</label>
             <input
               type="text"
               id="city"
@@ -70,7 +71,7 @@ import betaltegning from "../assets/images/betaltegning.svg";
               id="confirmInfo"
               class="mt-1 w-5 h-5 text-red-700 border-gray-300 focus:ring-red-500"
             />
-            <label for="confirmInfo" class="ml-3 text-gray-700">
+            <label for="confirmInfo" class="text-smb md:text-s ml-3">
               Jeg har sikret mig at ovenstående information er 100% korrekte.
             </label>
           </div>
@@ -82,7 +83,7 @@ import betaltegning from "../assets/images/betaltegning.svg";
               id="privacyPolicy"
               class="mt-1 w-5 h-5 text-red-700 border-gray-300 focus:ring-red-500"
             />
-            <label for="privacyPolicy" class="ml-3 text-gray-700">
+            <label for="privacyPolicy" class="text-smb md:text-s ml-3">
               Jeg har læst jeres privatpolitik og generelle bestemmelser og er indforstået med begge.
             </label>
           </div>
