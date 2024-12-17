@@ -6,15 +6,14 @@ import { Image } from 'astro:assets';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import herotext from "../assets/images/herotext.svg";
 import bordvin from "../assets/images/bordvin.svg";
 import logo from "../assets/images/logo.svg";
 import collage from "../assets/images/collage.png"
 import herovin from "../assets/images/hero-vin.png"
 import heroglas from "../assets/images/hero-glas.png"
-import herotext2 from "../assets/images/herotext2.svg";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import tegning1 from "../assets/images/tegning1.svg"
+import herotegning from "../assets/images/logo-u-baggrund-s-tynd.svg"
 import tegning2 from "../assets/images/tegning2.svg"
 import tegning3 from "../assets/images/tegning3.svg"
 import vin1 from "../assets/images/vin1.png"
@@ -22,64 +21,42 @@ import vin2 from "../assets/images/vin2.png"
 import vin3 from "../assets/images/vin3.png"
 import vin4 from "../assets/images/vin4.png"
 import vin5 from "../assets/images/vin5.png"
+import hero1 from "../assets/images/endelig1.webp"
+import hero2 from "../assets/images/hero1.webp"
+
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
 																	 <!-- Hero section  -->
 
-<div class=" flex flex-col items-center justify-center">
-  <!-- Main Content Grid -->
-  <section class="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 md:px-16 md:py-8 md:grid-rows-[min-content_1fr_min-content] overflow-hidden">
-	<!-- Brand navn -->
-	<div class="md:col-span-6">
-        <img class="" src={herotext.src} alt="">
-</div>
-    <!-- Image 1 -->
-    <div class="md:col-span-6 md:row-span-2 md:row-start-2">
-        <img class="md:object-cover md:w-full md:h-full" src={heroglas.src} alt="">
-    </div>
 
-    <!-- Image 2 -->
-    <div class="md:col-span-6 md:row-span-2 md:col-start-7">
-        <img class="md:object-cover md:w-full md:h-full" src={herovin.src} alt="">
-    </div>
-
-    <!-- Text og Logo Section -->
-    <div class="md:col-span-6">
-		<div class="flex justify-between items-center content-center place-content-center	">
-      <h2 class="text-red-600  text-xs lg:text-5xl">VIN PÅ ABONNEMENT</h2>
-        <img src={logo.src} alt="Logo" class="w-24 h-24">
-		</div>
-    </div>
-  </section>
-</div>	
 
 
   															<!-- Abonnenter section -->
 
-<section class=" text-black py-16 px-4">
+<section class=" text-brown md:mb-10">
   <!-- Heading -->
   <div class="mx-auto">
-    <h2 class="text-4xl pb-8">
-Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Vi udvælger og sammensætter tre forskellige vinkasser, som du kan vælge imellem.    </h2>
+    <h3 class="pb-8">
+Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Vi udvælger og sammensætter tre forskellige vinkasser, som du kan vælge imellem.    </h3>
   </div>
 
   <!-- Abonnenter -->
   <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
     <div class="">
 	<img class="md:object-cover md:w-full md:h-full" src={tegning1.src} alt="">
-      <p class="">Rødvinskasse</p>
-            <a href="/rodwin"><Button>Køb nu</Button></a>
+      <p class="text-mmb md:text-l mb-1">Rødvinskasse</p>
+            <a class="" href="/rodwin"><Button>Køb nu</Button></a>
     </div>
     <div class="">
 			<img class="md:object-cover md:w-full md:h-full" src={tegning2.src} alt="">
-      <p class="">Hvidvinskasse</p>
+      <p class="text-mmb md:text-l mb-1">Hvidvinskasse</p>
                   <a href="/rodwin"><Button>Køb nu</Button></a>
 
     </div>
     <div class="">
 			<img class="md:object-cover md:w-full md:h-full" src={tegning3.src} alt="">
-      <p class="">Mixed kasse</p>
+      <p class="text-mmb md:text-l mb-1">Mixed kasse</p>
                   <a href="/rodwin"><Button>Køb nu</Button></a>
 
     </div>
@@ -89,17 +66,17 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   																
   																<!-- Shop section -->
 <!-- Vinsektion -->
-<section class=" text-black py-12 ">
+<section class=" text-brown border-y ">
   <div class="mx-auto">
     <!-- Top Sektion: Navigation og Titel -->
-    <div class="flex justify-between items-center mb-8">
+    <div class="flex justify-between items-center md:mb-8">
       <!-- Piletaster -->
       <div class="flex gap-4">
   <Button variant="secondary"></Button>
   <Button></Button>
       </div>
       <!-- Titel -->
-      <h2 class="text-2xl md:text-3xl font-semibold">Vinflasker</h2>
+      <h3 class="">Vinflasker</h3>
       <!-- Vinshop Knap -->
                      <a href="/"><Button>Gå til shop</Button></a>
 
@@ -114,10 +91,10 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
           alt="Jongieux Blanc"
           class="mx-auto mb-4"
         />
-        <h3 class="text-sm md:text-base font-medium">
+        <p class="text-mmb md:text-m">
           2023 Jongieux Blanc, Vin De Savoie AOC, Frankrig
-        </h3>
-        <p class="text-gray-700">450 DKK (6 stk.)</p>
+        </p>
+        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 2 -->
@@ -127,10 +104,10 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
           alt="Ikon Alvarinho"
           class="mx-auto mb-4"
         />
-        <h3 class="text-sm md:text-base font-medium">
+        <p class="text-mmb md:text-m">
           2020 Ikon, Alvarinho, Fiuza, Tejo, Portugal
-        </h3>
-        <p class="text-gray-700">1074 DKK (6 stk.)</p>
+        </hp>
+        <p class="text-smb md:text-s">1074 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 3 -->
@@ -140,10 +117,10 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
           alt="Canallas Vino Blanco"
           class="mx-auto mb-4"
         />
-        <h3 class="text-sm md:text-base font-medium">
+        <p class="text-mmb md:text-m">
           2023 Canallas Vino Blanco, Valencia DOP, Spanien
-        </h3>
-        <p class="text-gray-700">450 DKK (6 stk.)</p>
+        </p>
+        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 4 -->
@@ -153,10 +130,10 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
           alt="Vin d'Orange"
           class="mx-auto mb-4"
         />
-        <h3 class="text-sm md:text-base font-medium">
-          2023 Vin d'Orange, DR, Frankrig
-        </h3>
-        <p class="text-gray-700">659 DKK (6 stk.)</p>
+        <p class="text-mmb md:text-m">
+          2023 Vin d'Orange, DR, Øst Frankrig
+        </p>
+        <p class="text-smb md:text-s">659 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 5 -->
@@ -166,10 +143,10 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
           alt="Zolla Salice Salentino"
           class="mx-auto mb-4"
         />
-        <h3 class="text-sm md:text-base font-medium">
+        <p class="text-mmb md:text-m">
           2021 Zolla, Salice Salentino DOP, Italien
-        </h3>
-        <p class="text-gray-700">450 DKK (6 stk.)</p>
+        </hp>
+        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
       </div>
     </div>
   </div>
@@ -178,20 +155,20 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 
 <!-- Vinklub section -->
 
-<section class="py-16 px-4 md:px-16">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+<section class="">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-5 items-center gap-8">
     <!-- Venstre Content -->
-    <div class="space-y-6">
-      <h2 class="text-lg font-medium tracking-wide">
+    <div class="md:col-span-2">
+      <p class="tracking-wide text-m md:text-l">
         Vin på abonnement
-      </h2>
-      <h2 class="text-4xl md:text-5xl uppercase font-bold leading-tight">
+      </p>
+      <h2 class="uppercase leading-tight mb-4 mt-2">
         Oplev vores vinklub
       </h2>
-      <p class="text-lg md:text-xl leading-relaxed">
+      <p class="text-mmb md:text-m  leading-relaxed">
         Når du bliver abonnent hos os, bliver du samtidig en del af vores vinklub.
       </p>
-      <p class="text-lg md:text-xl leading-relaxed">
+      <p class="text-mmb md:text-m my-2 leading-relaxed">
         Vi mødes én gang hver måned og smager på næste måneds vin, så du får mulighed for at tilpasse din næste vinkasse til dine ønsker og behov. Derudover udveksler vi erfaringer og viden om vin og har nogle hyggelige stunder sammen.
       </p>
 <Button>Bliv abonnent</Button>
@@ -199,14 +176,14 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     </div>
 
     <!-- Højre Image -->
-    <div class="flex justify-center">
+    <div class="flex justify-center md:col-span-3">
 			<img class="md:object-cover :w-full h-auto" src={bordvin.src} alt="Bord med vinglas">
     </div>
   </div>
 </section>
 
   																<!-- Nyhedsbrev section -->
-												<section class="py-16 px-8 md:px-16">
+												<section class="">
   <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
     <!-- Venstre Content -->
 	   <div class="flex justify-center">
@@ -214,24 +191,24 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
      </div>
 
     <!-- Højre Content-->
-    <div class="space-y-6">
-      <p class="text-lg font-medium  tracking-wide">Tilmelding til nyhedsbrev</p>
-      <h2 class="text-4xl md:text-5xl uppercase leading-tight">FÅ 10% PÅ DIN FØRSTE ORDRE</h2>
+    <div class="">
+      <p class="tracking-wide text-m md:text-l">Tilmelding til nyhedsbrev</p>
+      <h2 class="uppercase leading-tight mb-4 mt-2">FÅ 10% PÅ DIN FØRSTE ORDRE</h2>
         <!--  Input fælt -->
-    <form class="flex flex-col md:flex-row items-center border-gray-800 overflow-hidden">
+    <form class="flex flex-col md:flex-row items-center  overflow-hidden">
       <input 
         type="email" 
         placeholder="Skriv din e-mail her..." 
-        class="flex-grow px-4 py-3 text-lg text-gray-800 placeholder-gray-500 "
+        class="flex-grow px-4 py-3 bg-creamywhite"
         required
       />
       <button 
         type="submit" 
-        class="flex items-center justify-center px-6 py-3 border-r border-y border-black text-lg font-medium hover:bg-red-700 hover:text-white transition">
+        class="flex items-center justify-center px-6 py-3 border-r border-y border-brown text-lg font-medium hover:bg-red-700 hover:text-orange transition">
         →
       </button>
     </form>
-      <p class="text-sm md:text-sm leading-relaxed">
+      <p class="text-smb md:text-s leading-relaxed mt-2">
 Ved tilmelding til nyhedsbrevet accepterer jeg at modtage nyheder, tilbud og inspiration fra ExploreWines via e-mail. Jeg kan til enhver tid afmelde mig via linket i bunden af nyhedsbrevet. Oplysningerne behandles i overensstemmelse med ExploreWines' privatlivspolitik.      </p>
     </div>
 

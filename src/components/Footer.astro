@@ -4,70 +4,81 @@ import explorewinesfooter from "../assets/images/explorewinesfooter.svg";
 
 ---
 <div>
-<footer class=" pt-8 border-t border-black">
-  <div class="mx-auto space-y-16">
+<footer class=" pt-8 border-t border-brown">
+  <div class="mx-auto">
     <!-- Large Logo -->
-    <div class="px-8">
+    <div class="px-8 pb-8 border-b">
           <img class="object-cover w-full h-full" src={explorewinesfooter.src} alt="">
     </div>
 
-    <!-- Footer Content -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-black box-content mx-0">
-      <!-- Venstre side footer -->
-       <div class=" md:flex justify-between px-8 py-8 border-r border-black box-content">
-
-    <!-- Column 1: Links -->
-      <div class="space-y-4">
-        <ul class="space-y-2 text-xl text-gray-600">
-            <li><a href="#" class="hover:underline">Vinabonnement</a></li>
-          <li><a href="#" class="hover:underline">Vinshop</a></li>
-          <li><a href="#" class="hover:underline">Om os</a></li>
-        </ul>
+   <div class="grid grid-cols-1 md:grid-cols-2 px-6 border-brown place-items-center">
+    <!-- Venstre side: Kontakt og Information -->
+    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8  ">
+          <!-- Midt: Vinabonnement Links -->
+    <div class="space-y-4 md:space-y-8">
+      <ul class="space-y-1 text-base leading-relaxed">
+        <li><a href="#" class="hover:underline text-m md:text-l ">Vinabonnement</a></li>
+        <li><a href="#" class="hover:underline text-m md:text-l ">Vinshop</a></li>
+        <li><a href="#" class="hover:underline text-m md:text-l ">Om os</a></li>
+      </ul>
+      <!-- Sociale Ikoner -->
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="text-l text-brown">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="text-2xl hover:text-red-600">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
-
-      <!-- Column 2: Contact -->
-      <div class="space-y-4">
-        <h3 class="text-lg">Kontakt</h3>
-        <ul class="space-y-2 ">
+    </div>
+      <!-- Kontakt -->
+      <div>
+        <p class="text-m md:text-l mb-2">Kontakt</p>
+        <ul class="space-y-1 text-base leading-relaxed">
           <li>Tlf. 4118 3959</li>
           <li>Email: <a href="mailto:info@explorewines.dk" class="hover:underline">info@explorewines.dk</a></li>
           <li>CVR: 29396930</li>
         </ul>
       </div>
-
-      <!-- Column 3: Information -->
-      <div class="space-y-4">
-        <h3 class="text-lg font-bold text-gray-800">Information</h3>
-        <ul class="space-y-2 text-gray-600">
+      <!-- Information -->
+      <div>
+        <p class="text-m md:text-l mb-2">Information</h3>
+        <ul class="space-y-1 text-base leading-relaxed">
           <li><a href="#" class="hover:underline">Handelsbetingelser</a></li>
           <li><a href="#" class="hover:underline">Persondatapolitik</a></li>
           <li><a href="#" class="hover:underline">Cookiepolitik</a></li>
         </ul>
       </div>
-</div>
-<div class="">
-      <!-- Højre side footer: Nyhedsbrev -->
-       <div class="space-y-6 pr-8 py-8">
-      <p class="text-lg font-medium uppercase tracking-wide">
- Nyhedsbrev      </p>
-      <h2 class="text-4xl md:text-5xl uppercase leading-tight">
-FÅ 10% PÅ DIN FØRSTE ORDRE      </h2>
+    </div>
+
+
+    <!-- Højre Side: Nyhedsbrev -->
+ <!-- Højre side footer: Nyhedsbrev -->
+  <div class="border-l">
+      <p class="tracking-wide text-m md:text-[4.5rem]">Nyhedsbrev</p  >
+      <p class="text-mmb md:text-m leading-tight mb-4 mt-2">Tilmeld dig vores nyhedsbrev og få 10% rabat på din første ordre</p>
         <!--  Input fælt -->
-    <form class="flex flex-col md:flex-row items-center border-gray-800 overflow-hidden">
+    <form class="flex md:flex-row items-center  overflow-hidden ">
       <input 
         type="email" 
         placeholder="Skriv din e-mail her..." 
-        class="flex-grow px-4 py-3 text-lg text-gray-800 placeholder-gray-500 "
+        class="flex-grow px-4 py-3 bg-creamywhite"
         required
       />
       <button 
         type="submit" 
-        class="flex items-center justify-center px-6 py-3 border-r border-y border-black text-lg font-medium hover:bg-red-700 hover:text-white transition">
+        class="flex items-center justify-center px-6 py-3 border-r border-y border-brown text-lg font-medium hover:bg-red-700 hover:text-orange transition">
         →
       </button>
     </form>
-      <p class="text-sm md:text-sm leading-relaxed">
+      <p class="text-xsmb md:text-xs leading-relaxed mt-2">
 Ved tilmelding til nyhedsbrevet accepterer jeg at modtage nyheder, tilbud og inspiration fra ExploreWines via e-mail. Jeg kan til enhver tid afmelde mig via linket i bunden af nyhedsbrevet. Oplysningerne behandles i overensstemmelse med ExploreWines' privatlivspolitik.      </p>
-    </div>
 </div>
+  </div>
+</footer>
+
+
+
+
+  
       

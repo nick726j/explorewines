@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  section {
+    @apply py-16;
+  }
   a {
     @apply text-brown text-s;
   }
@@ -39,6 +42,9 @@
   }
   @media (max-width: 639px) {
     /* Mobil: Under sm-breakpoint (640px) */
+    section {
+      @apply py-8;
+    }
     a {
       @apply text-brown text-smb;
     }
