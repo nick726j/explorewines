@@ -6,13 +6,13 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import betaltegning from "../assets/images/betaltegning.svg";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Step 2/3">
 <!-- Købsflow Side -->
-<section class="text-black px-8">
+<section class="text-brown">
   <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
     <!-- Venstre Illustration -->
     <div class="hidden md:block md:col-span-2 items-center">
-      <div class="relative h-full border-r border-black">
+      <div class="relative h-full border-r border-brown">
         <!-- Illustration -->
         <img class="md:object-cover w-full h-auto" src={betaltegning.src} alt="kasse og vin" />
       </div>
@@ -20,45 +20,48 @@ import betaltegning from "../assets/images/betaltegning.svg";
 
     <!-- Højre Indhold -->
     <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
-      <div class="border border-black p-6 md:p-12 inline-block w-full">
+      <div class="border border-brown p-6 md:p-12 inline-block w-full">
 
         <!-- Titel -->
-        <h2 class="text-xl md:text-3xl font-bold text-red-700 mb-6">
-          KONTAKTOPLYSNINGER <span class="text-xs sm:text-sm text-black float-right">Trin 2/3</span>
-        </h2>
+      
+        <div class="mb-6 flex justify-between items-center">
+          <h3>KONTAKTOPLYSNINGER</h3>
+          <p class="text-mmb md:text-m">Trin 2/3</p>
+        </div>
+       
 
         <!-- Formular -->
         <form>
           <!-- Fulde Navn -->
           <div class="mb-6 text-left">
-            <label for="fullName" class="block text-gray-700 font-medium mb-2">Fulde navn</label>
+            <label for="fullName" class=" text-mmb md:text-m block mb-2">Fulde navn</label>
             <input
               type="text"
               id="fullName"
               placeholder="Indtast dit fulde navn..."
-              class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
 
           <!-- E-mail -->
           <div class="mb-6 text-left">
-            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+            <label for="email" class="block text-mmb md:text-m mb-2">E-mail</label>
             <input
               type="email"
               id="email"
               placeholder="Indtast din email-adresse..."
-              class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
 
           <!-- Telefonnummer -->
           <div class="mb-8 text-left">
-            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefonnummer</label>
+            <label for="phone" class="text-mmb md:text-m block mb-2">Telefonnummer</label>
             <input
               type="tel"
               id="phone"
               placeholder="Indtast dit telefon nummer..."
-              class="w-full border border-black p-3 focus:outline-none focus:ring-2 focus:ring-red-500"
+              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
         </form>

@@ -18,10 +18,11 @@ import omostegning from "../assets/images/om-os-tegning.svg";
 	<h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-12">
       Om ExploreWines
     </h1>
-	<p>Hos Explorewines er vores mission at pirre dine smagsløg og give dig unikke vinoplevelser. Brug vores månedskasse til at opdage nye favoritter, hold vinsmagninger med vennerne, eller glæd dig over valgfriheden i vinreolen, når det er tid til at finde den perfekte flaske til weekenden. Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris.
+	<p class=" text-smb md:text-m leading-relaxed">Hos Explorewines er vores mission at pirre dine smagsløg og give dig unikke vinoplevelser. Brug vores månedskasse til at opdage nye favoritter, hold vinsmagninger med vennerne, eller glæd dig over valgfriheden i vinreolen, når det er tid til at finde den perfekte flaske til weekenden. Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris.
+        <br> <br>
 
 Explorewines samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine.
-
+<br> <br>
 Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfor.</p>
 <Button>Kontakt</Button>
 
@@ -35,7 +36,7 @@ Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfo
             <div class="divide-y divide-black">
                 <!-- Accordion item -->
                 <div x-data="{ expanded: false }" class="py-2">
-                    <h2>
+                    <p class="text-mmb md:text-m">
                         <button
                             id="faqs-title-01"
                             type="button"
@@ -50,7 +51,7 @@ Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfo
                                 <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
                             </svg>
                         </button>
-                    </h2>
+                    </p>
                     <div
                         id="faqs-text-01"
                         role="region"
@@ -59,15 +60,15 @@ Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfo
                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
                         >
                         <div class="overflow-hidden">
-                            <p class="pb-3">
-Vi har haft base i Aarhus siden 2006, hvor Jens Peter Lund grundlagde Explorewines. I dag drives vi af Dorthe og Per, der brænder for at dele den begejstring, vi selv har oplevet gennem mange års vinrejser.                             </p>
+                            <p class=" text-smb md:text-s pb-3">
+Vi har haft base i Aarhus siden 2006, hvor Jens Peter Lund grundlagde Explorewines. <br> <br> I dag drives vi af Dorthe og Per, der brænder for at dele den begejstring, vi selv har oplevet gennem mange års vinrejser.                             </p>
                         </div>
                     </div>
                 </div> 
 				
 				 <!-- Accordion item -->
                 <div x-data="{ expanded: false }" class="py-2">
-                    <h2>
+                    <p class="text-mmb md:text-m">
                         <button
                             id="faqs-title-01"
                             type="button"
@@ -82,7 +83,7 @@ Vi har haft base i Aarhus siden 2006, hvor Jens Peter Lund grundlagde Explorewin
                                 <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
                             </svg>
                         </button>
-                    </h2>
+                    </p>
                     <div
                         id="faqs-text-01"
                         role="region"
@@ -91,16 +92,16 @@ Vi har haft base i Aarhus siden 2006, hvor Jens Peter Lund grundlagde Explorewin
                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
                         >
                         <div class="overflow-hidden">
-                            <p class="pb-3">
-Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris. Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine. Vi samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. 
-
+                            <p class="text-smb md:text-s pb-3">
+Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris. <br> <br> Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine. Vi samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. 
+<br> <br>
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Hos ExploreWines.dk har vi skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
                     </div>
                 </div>                                                                                            
             
 			 <!-- Accordion item -->
                 <div x-data="{ expanded: false }" class="py-2">
-                    <h2>
+                    <p class="text-mmb md:text-m">
                         <button
                             id="faqs-title-01"
                             type="button"
@@ -115,7 +116,7 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
                                 <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
                             </svg>
                         </button>
-                    </h2>
+                    </p>
                     <div
                         id="faqs-text-01"
                         role="region"
@@ -124,18 +125,18 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
                         >
                         <div class="overflow-hidden">
-                            <p class="pb-3">
-Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement. 
+                            <p class="text-smb md:text-s pb-3">
+Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement.  <br>
 
 Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
-Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Kassen sammensættes, så der både er gode hverdagsvine til et velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du skænker den for dine venner.
-
+<br> <br> Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Kassen sammensættes, så der både er gode hverdagsvine til et velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du skænker den for dine venner.
+<br> <br>
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Vi har skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
                     </div>
                 </div> 
 				 <!-- Accordion item -->
                 <div x-data="{ expanded: false }" class="py-2">
-                    <h2>
+                    <p class="text-mmb md:text-m">
                         <button
                             id="faqs-title-01"
                             type="button"
@@ -150,7 +151,7 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
                                 <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
                             </svg>
                         </button>
-                    </h2>
+                    </p>
                     <div
                         id="faqs-text-01"
                         role="region"
@@ -159,12 +160,13 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
                         :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
                         >
                         <div class="overflow-hidden">
-                            <p class="pb-3">
-Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement. 
+                            <p class="text-smb md:text-s pb-3">
+Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement. <br> <br>
 
 Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
 Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Kassen sammensættes, så der både er gode hverdagsvine til et velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du skænker den for dine venner.
 
+<br> <br> 
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Vi har skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
                     </div>
                 </div> 
@@ -182,38 +184,3 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
     </div>
 </section>
 
-<!-- Nyhedsbrev section -->
-												<section class="py-16 px-8 md:px-16">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-    <!-- Venstre Content -->
-	   <div class="flex justify-center">
-			<img class="md:object-cover :w-full h-auto" src={collage.src} alt="Samling af stemningsbilleder">
-     </div>
-
-    <!-- Højre Content-->
-    <div class="space-y-6">
-      <p class="text-lg font-medium  tracking-wide">Tilmelding til nyhedsbrev</p>
-      <h2 class="text-4xl md:text-5xl uppercase leading-tight">FÅ 10% PÅ DIN FØRSTE ORDRE</h2>
-        <!--  Input fælt -->
-    <form class="flex flex-col md:flex-row items-center border-gray-800 overflow-hidden">
-      <input 
-        type="email" 
-        placeholder="Skriv din e-mail her..." 
-        class="flex-grow px-4 py-3 text-lg text-gray-800 placeholder-gray-500 "
-        required
-      />
-      <button 
-        type="submit" 
-        class="flex items-center justify-center px-6 py-3 border-r border-y border-black text-lg font-medium hover:bg-red-700 hover:text-white transition">
-        →
-      </button>
-    </form>
-      <p class="text-sm md:text-sm leading-relaxed">
-Ved tilmelding til nyhedsbrevet accepterer jeg at modtage nyheder, tilbud og inspiration fra ExploreWines via e-mail. Jeg kan til enhver tid afmelde mig via linket i bunden af nyhedsbrevet. Oplysningerne behandles i overensstemmelse med ExploreWines' privatlivspolitik.      </p>
-    </div>
-
-  </div>
-</section>			
-
-	</article>
-</MainLayout>

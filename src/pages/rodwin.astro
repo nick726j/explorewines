@@ -18,7 +18,7 @@ import Anmeldelser from "../components/Anmeldelser.astro";
    <h1 class="uppercase mb-12">
       Vinabonnement
     </h1>	
-<section class="py-16 px-4 md:px-16">
+<section class="">
   <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Venstre Image -->
     <div class="flex justify-center">
@@ -146,10 +146,10 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
     <div class="mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
       <!-- Venstre Content -->
       <div class="md:col-span-2">
-        <h2 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
+        <h3 id="contentTitle" class="text-3xl md:text-4xl leading-tight">
           LA Cruz Vega Roble, DO <br />
           La Mancha, Spanien <span class="text-xl font-normal">2018</span>
-        </h2>
+        </h3>
         <div class="mt-4">
           <Button>Køb nu</Button>
         </div>
@@ -157,7 +157,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
 
       <!-- Højre Content -->
       <div class="space-y-4 md:col-start-3 md:col-span-3">
-        <p id="contentDescription" class="text-lg leading-relaxed">
+        <p id="contentDescription" class="text-smb md:text-l leading-relaxed">
           Først på listen har vi den alsidige og drikkevenlige LA Cruz Vega. En spansk vin, der elegant kombinerer den klassiske Tempranillo-drue med Merlot og Syrah, som bringer et forfriskende pift til den traditionelle vin. Vinen er fyldt med mørke bær som solbær og brombær, krydret med lette noter af tobak og egefad. Den smager fantastisk sammen med ribbenssteg eller andesteg, og vil være en oplagt ledsager til dine yndlingsretter med rodfrugter og kål.
         </p>
       </div>
@@ -182,19 +182,19 @@ const activeIndicator = document.getElementById("activeIndicator") as HTMLDivEle
   const contentData = [
     {
       title: "Jongieux Blanc, Vin De Savoie AOC",
-      description: "A delightful French white wine, perfect for elegant dining. Crisp and refreshing.",
+      description: "En elegant hvidvin fra Savoie-regionen i Frankrig, fremstillet på lokale druer. Årgang 2023 byder på en frisk og frugtrig smagsprofil med noter af citrus, grønne æbler og en let mineralsk afslutning. Perfekt som ledsager til fisk, skaldyr og lyse forretter.",
     },
     {
       title: "L A Cruz Vega Roble, Bogarve 1915, DO La Mancha",
-      description: "A robust Spanish red wine with hints of dark berries, tobacco, and oak.",
+      description: "En karakterfuld rødvin fra det historiske La Mancha-område i Spanien. Denne 2018-årgang byder på noter af modne røde bær, krydderier og et strejf af vanilje fra lagring på egetræ. Velafbalanceret med en blød tanninstruktur, perfekt til grillet kød, tapas eller fyldige pastaretter.",
     },
     {
       title: "Escriba Reserva, DOC do Tejo",
-      description: "A Portuguese delight, combining smooth tannins and a fruity aroma.",
+      description: "En fyldig og sofistikeret rødvin fra Tejo-regionen i Portugal. Årgang 2022 imponerer med intense aromaer af mørke bær, krydderier og subtile egetræsnoter. Smagen er rund og harmonisk med en vedvarende afslutning. Ideel til oksekød, lam eller modne oste.",
     },
     {
       title: "Pinotage Organic Wine By Sophie Germanier",
-      description: "An organic South African wine with deep notes of plum and spice.",
+      description: "En økologisk Pinotage fra Sydafrika, der forener bæredygtighed og smag. Årgang 2022 byder på saftige noter af mørke bær, blommer og et strejf af røg og chokolade. En fyldig, men balanceret vin med silkebløde tanniner. Perfekt til grillretter, vildt eller krydrede vegetarretter.",
     },
   ];
 
