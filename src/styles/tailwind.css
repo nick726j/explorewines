@@ -3,12 +3,72 @@
 @tailwind utilities;
 
 @layer base {
-  /* p{
-        @apply text-body;
-    } */
+  a {
+    @apply text-brown text-s;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-brown text-smb; /* Farve og størrelse */
+  }
+  * {
+    @apply text-brown; /* Bruger en Tailwind farve */
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-brown text-s; /* Farve og størrelse */
+  }
   h1 {
     @apply text-[4.5rem];
     @apply font-regular;
-    @apply text-brown;
+  }
+  h2 {
+    @apply text-[3.4rem];
+    @apply font-regular;
+  }
+  h3 {
+    @apply text-[2.9rem];
+    @apply font-bold;
+  }
+  h4 {
+    @apply text-[1.9rem];
+    @apply font-bold;
+  }
+  h5 {
+    @apply text-[1.5rem];
+    @apply font-bold;
+  }
+  @media (max-width: 639px) {
+    /* Mobil: Under sm-breakpoint (640px) */
+    a {
+      @apply text-brown text-smb;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      @apply text-brown text-smb; /* Farve og størrelse */
+    }
+    * {
+      @apply text-brown; /* Bruger en Tailwind farve */
+    }
+    h1 {
+      @apply text-[1.7rem];
+      @apply font-regular;
+    }
+    h2 {
+      @apply text-[1.4rem];
+      @apply font-regular;
+    }
+    h3 {
+      @apply text-[1.2rem];
+      @apply font-bold;
+    }
+    h4 {
+      @apply text-[0.9rem];
+      @apply font-bold;
+    }
+    h5 {
+      @apply text-[0.7rem];
+      @apply font-bold;
+    }
   }
 }

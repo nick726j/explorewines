@@ -4,8 +4,7 @@ import buttonarrow from "../assets/images/buttonarrow.svg"
 const { variant = "primary" } = Astro.props;
 
 const buttonStyling =
-  "border border-black py-1.5 px-3 md:py-2 md:px-4 text-xs md:text-base rounded-3xl inline-flex flex-nowrap items-center gap-2 justify-between hover:bg-orange hover:text-white transition-colors duration-150";
-  
+  "group border border-black py-1.5 px-3 md:py-2 md:px-4 text-xs md:text-base rounded-3xl inline-flex flex-nowrap items-center gap-2 justify-between hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors duration-150";
 ---
 <div>
   <button
@@ -13,9 +12,11 @@ const buttonStyling =
     aria-label="Navigate to next page"
   >
     <slot></slot>
-    <!-- SVG med rotation til secondary -->
+    <!-- SVG med rotation og fill ændring -->
     <svg
-      class={`w-4 h-4 md:w-6 md:h-6 transition-transform duration-150 ${variant === "secondary" ? "rotate-180" : ""}`}
+      class={`w-4 h-4 md:w-6 md:h-6 transition-colors duration-150 group-hover:fill-creamywhite ${
+        variant === "secondary" ? "rotate-180" : ""
+      }`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 13 8"
     >
