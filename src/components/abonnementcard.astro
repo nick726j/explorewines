@@ -7,10 +7,10 @@ import Link from "../components/Link.astro";
 ---
 
 
-<article x-data="{ open: false }" class="card>
+<article x-data="{ open: false }" class="card">
     <!-- Mobile Grid Layout -->
-    <div class="grid grid-cols-1">
-        <!-- Image -->
+    <div class="grid grid-cols-1 mb-10">
+                <!-- Image -->
         <div class="aspect-[3/4] md:aspect-full overflow-hidden px-6">
             <img 
                 src={cardimage} 
@@ -20,7 +20,7 @@ import Link from "../components/Link.astro";
         </div>
 
         <!-- Content -->
-        <div class="grid grid-cols-2 px-6">
+        <div class="grid grid-cols-2 px-6 max-[400px]:grid-cols-1">
             <div>
                 <p class="text-l my-2 text-brown">{navn}</p>
             </div>
@@ -39,7 +39,7 @@ import Link from "../components/Link.astro";
     <div 
         x-show="open" 
         x-transition 
-        class="p-4 bg-brown text-creamywhite md:hidden"
+        class="p-4 bg-brown text-creamywhite md:hidden -mt-10"
     >
         <p class="text-l text-creamywhite mb-2">{navn}</p>
         <p class="text-smb">

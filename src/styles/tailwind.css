@@ -88,3 +88,12 @@ h5 {
     @apply font-roman;
   }
 }
+
+@media (max-width: 400px) {
+  /* Mobil: Under sm-breakpoint (640px) */
+  h1 {
+    @apply text-[1.7rem];
+    @apply font-medium;
+    @apply uppercase;
+  }
+}

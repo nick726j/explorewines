@@ -28,14 +28,15 @@ import hero1 from "../assets/images/endelig1.webp"
 import hero2 from "../assets/images/hero1.webp"
 import herotextfulg from "../assets/images/herotextfulg.svg"
 import Udforsk from "../assets/images/Udforsk.svg"
+import Udforskmobil from "../assets/images/knapheromobil.svg"
 
 
 
 ---
 <MainLayout title="Titel">
 	<article class="">
-																	 <!-- Hero section  -->
-<section class="relative mb-40 h-2/3">
+																	 <!-- Hero section desktop  -->
+<section class="relative mb-40 h-2/3 hidden md:block">
   
 
   <!-- Grid container -->
@@ -79,7 +80,43 @@ import Udforsk from "../assets/images/Udforsk.svg"
     </div>
   </div>
 </section>
+																	 <!-- Hero section mobile  -->
+<section class="relative mb-10 h-2/3  md:hidden">
+  
 
+  <!-- Grid container -->
+  <div class="flex h-full w-full">
+
+  <div class="absolute pt-5 px-4 z-10 flex items-center justify-center max-h-full">
+    <img 
+      src={herotextfulg.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+  </div>
+    </div>
+
+    <!-- Højre side -->
+    <div class=" z-0 flex items-center justify-center">
+      <img 
+        src={hero1.src} 
+        alt="Højre billede"
+        class="object-cover w-full h-full]"
+      >
+      
+      <!-- Overlay Tekst Knappen -->
+    <div class="absolute px-4 bottom-2 z-10 flex items-center justify-center max-h-full">
+      <a href="/abonnement">
+    <img 
+      src={Udforskmobil.src} 
+      alt="SVG ikon"
+      class="w-screen h-auto"
+    >
+    </a>
+  </div>
+    </div>
+  </div>
+</section>
 
 
 
