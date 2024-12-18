@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import explorewinesfooter from "../assets/images/explorewinesfooter.svg";
 import fbicon from "../assets/images/fb.svg"
 import igicon from "../assets/images/ig.svg"
-
 ---
                                                                     <!-- Mobile footer -->
 
@@ -41,18 +40,18 @@ import igicon from "../assets/images/ig.svg"
     <!-- Højre Side: Vinabonnement og Sociale Ikoner -->
     <div class="space-y-6">
       <div>
-        <ul class="leading-relaxed space-y-1">
-          <li><a href="#" class="hover:underline text-l">Vinabonnement</a></li>
+        <ul class="space-y-1">
+          <li><a href="/abonnement" class="hover:underline text-l">Vinabonnement</a></li>
           <li><a href="#" class="hover:underline text-l">Vinshop</a></li>
-          <li><a href="#" class="hover:underline text-l">Om os</a></li>
+          <li><a href="/om" class="hover:underline text-l">Om os</a></li>
         </ul>
       </div>
       <!-- Sociale Ikoner -->
       <div class="flex space-x-4 mt-4">
-        <a href="#" class="text-l text-brown">
+        <a href="https://www.facebook.com/ExploreWines/" class="text-l text-brown">
           <img class="fab fa-facebook w-full h-full" src={igicon.src}>
         </a>
-        <a href="#" class="text-l text-brown">
+        <a href="https://www.instagram.com/explorewines.dk/" class="text-l text-brown">
           <img class="fab fa-instagram w-full h-full" src={fbicon.src}>
         </a>
       </div>
@@ -103,16 +102,16 @@ Ved tilmelding til nyhedsbrevet accepterer jeg at modtage nyheder, tilbud og ins
           <!-- Midt: Vinabonnement Links -->
     <div class="space-y-4 md:space-y-8">
       <ul class="space-y-1 text-base leading-relaxed">
-        <li><a href="#" class="hover:underline text-m md:text-l ">Vinabonnement</a></li>
+        <li><a href="/abonnement" class="hover:underline text-m md:text-l ">Vinabonnement</a></li>
         <li><a href="#" class="hover:underline text-m md:text-l ">Vinshop</a></li>
-        <li><a href="#" class="hover:underline text-m md:text-l ">Om os</a></li>
+        <li><a href="/om" class="hover:underline text-m md:text-l ">Om os</a></li>
       </ul>
       <!-- Sociale Ikoner -->
       <div class="flex space-x-4 mt-4">
-        <a href="#" class="text-l text-brown">
+        <a href="https://www.facebook.com/ExploreWines/" class="text-l text-brown">
           <img class="fab fa-facebook w-full h-full" src={igicon.src}>
         </a>
-        <a href="#" class="text-l text-brown">
+        <a href="https://www.instagram.com/explorewines.dk/" class="text-l text-brown">
           <img class="fab fa-instagram w-full h-full" src={fbicon.src}>
         </a>
       </div>

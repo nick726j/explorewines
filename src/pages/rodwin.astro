@@ -11,11 +11,11 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
-   <h1 class="mb-12 ml-8 md:mt-24 mt-16">
+   <h1 class="mb-12 ml-8 md:ml-14 md:mt-24 mt-16">
       Vinabonnement
     </h1>	
 <section class="">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-16 px-8 md:mb-24 mb-16">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-16 ml-8 md:ml-14 mr-8 md:mr-14 md:mb-24 mb-16">
         <!-- Venstre Image -->
     <div class="flex justify-center">
 			<img class="md:object-cover :w-full h-auto" src={abonnementkasse.src} alt="kasse og vin">
@@ -155,7 +155,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
           La Mancha, Spanien <span class="">2018</span>
         </h3>
         <div class="mt-4">
-          <Button variant="secondary">Køb nu</Button>
+          <a href="/betal"><Button variant="secondary">Køb nu</Button></a>
         </div>
       </div>
 

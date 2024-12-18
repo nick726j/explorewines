@@ -14,7 +14,7 @@ import login from '../assets/images/login.svg';
     <p class="text-xsmb md:text-xs my-2">FRI FRAGT VED KØB AF VINKASSE PÅ ABONNEMENT</p>
 </div>
 
-<div class="mx-auto flex items-center justify-between py-4 border-b border-brown px-1 md:px-3">
+<div class="mx-auto flex items-center justify-between py-4 border-b border-brown px-1 md:px-8">
   <!-- Venstre side: Logo -->
   <a href="/" class="flex items-center gap-1">
     <img src={headerlogo.src} alt="ExploreWines Logo" class="w-10 h-10" />
@@ -29,7 +29,7 @@ import login from '../assets/images/login.svg';
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
   </a>
-  <div class="absolute hidden group-hover:block bg-creamywhite pt-2 w-40">
+  <div class="absolute hidden group-hover:block bg-creamywhite pt-2 w-40 z-40">
     <a href="/rodwin" class="block px-4 py-2 hover:underline">Rødvinskasse</a>
     <a href="/rodwin" class="block px-4 py-2 hover:underline">Hvidvinskasse</a>
     <a href="/rodwin" class="block px-4 py-2 hover:underline">Mixkasse</a>
@@ -54,7 +54,7 @@ import login from '../assets/images/login.svg';
   <!-- Hamburger Menu til Mobile -->
   <button
     id="menu-toggle"
-    class="md:hidden flex items-center justify-center w-8 h-8 border"
+    class="md:hidden flex items-center justify-center w-8 h-8"
   >
     <!-- Burger Icon -->
     <svg
@@ -92,8 +92,8 @@ import login from '../assets/images/login.svg';
 </div>
 
 <!-- Søge felt -->
-<div class="my-2 border-b border-brown">
-  <div class="flex items-center px-8">
+<div class="border-b border-brown">
+  <div class="flex items-center px-2 md:px-8">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="w-5 h-5 text-brown"
@@ -125,8 +125,11 @@ import login from '../assets/images/login.svg';
     <a href="/abonnement" class="text-mmb hover:underline">Vinabonnement</a>
     <a href="/" class="text-mmb hover:underline">Vinshop</a>
     <a href="/om" class="text-mmb hover:underline">Om os</a>
-    <Button class="mt-4">Bliv abonnent</Button>
-  </nav>
+    <div class="flex gap-4">
+      <img src={login.src} alt="User Icon" class="w-6 h-6" />
+      <img src={kurv.src} alt="Cart Icon" class="w-6 h-6" />
+    </div>  
+</nav>
 </div>
 
 <script>

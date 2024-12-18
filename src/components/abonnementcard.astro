@@ -2,18 +2,51 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
-const {cardimage="", cardimagealt="", navn="",}= Astro.props;
+const {cardimage="", cardimagealt="", navn="", description="", }= Astro.props;
 import Link from "../components/Link.astro";
 ---
 
-<article class="card @container border-1 border-black lg:px-2 px-12">
-    <div class="flex flex-col h-full">
-        <div class="relative pt-4">
-            <img src={cardimage} alt={cardimagealt} class="object-cover w-full">
+
+<article x-data="{ open: false }" class="card">
+    <!-- Mobile Grid Layout -->
+    <div class="grid grid-cols-1 mb-10">
+                <!-- Image -->
+        <div class="aspect-[3/4] md:aspect-full overflow-hidden px-6">
+            <img 
+                src={cardimage} 
+                alt={cardimagealt} 
+                class="w-full h-full object-cover"
+            />
         </div>
-        <div class="">
-    <h4 class="">{navn}</h4>
+
+        <!-- Content -->
+        <div class="grid grid-cols-2 px-6 max-[400px]:grid-cols-1">
+            <div>
+                <p class="text-l my-2 text-brown">{navn}</p>
+            </div>
+            <!-- Accordion Button -->
+            <button 
+                @click="open = !open" 
+                class="md:hidden place-self-end	 my-2 w-40 h-10 border border-brown text-brown px-4 py-2 rounded-full hover:bg-brown hover:text-creamywhite transition flex items-center justify-between basis-0"
+            >
+                Læs mere
+                <span class=" transform transition-transform" :class="{'rotate-180': open}">↑</span>
+            </button>
+        </div>
     </div>
-    </div>  
-      
+
+    <!-- Accordion Content -->
+    <div 
+        x-show="open" 
+        x-transition 
+        class="p-4 bg-brown text-creamywhite md:hidden -mt-10"
+    >
+        <p class="text-l text-creamywhite mb-2">{navn}</p>
+        <p class="text-smb">
+            {description}
+        </p>
+        <div class="mt-4">
+            <Button variant="secondary">Køb nu</Button>
+        </div>
+    </div>
 </article>
