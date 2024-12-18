@@ -37,17 +37,17 @@ textarea::placeholder {
   @apply text-s;
 }
 h1 {
-  @apply text-[4.5rem];
+  @apply text-[3.5rem];
   @apply font-medium;
   @apply uppercase;
 }
 h2 {
-  @apply text-[3.4rem];
+  @apply text-[2.4rem];
   @apply font-medium;
   @apply uppercase;
 }
 h3 {
-  @apply text-[2.9rem];
+  @apply text-[2rem];
   @apply font-roman;
 }
 h4 {
@@ -60,9 +60,6 @@ h5 {
 }
 @media (max-width: 639px) {
   /* Mobil: Under sm-breakpoint (640px) */
-  section {
-    @apply py-8;
-  }
   a {
     @apply text-smb;
   }
