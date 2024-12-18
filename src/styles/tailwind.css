@@ -3,79 +3,96 @@
 @tailwind utilities;
 
 @layer base {
-  section {
-    @apply py-16;
-  }
-  a {
-    @apply text-brown text-s;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    @apply text-brown text-smb; /* Farve og størrelse */
+  html {
+    @apply bg-base-background text-base-text; /* Brug de tilføjede farver */
   }
 
+  body {
+    @apply bg-base-background text-base-text;
+  }
+
+  a {
+    @apply text-base-text; /* Links har også brun farve */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-base-text;
+  }
+}
+
+section {
+  @apply py-16;
+}
+a {
+  @apply text-s;
+}
+input::placeholder,
+textarea::placeholder {
+  @apply text-smb;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-s;
+}
+h1 {
+  @apply text-[4.5rem];
+  @apply font-medium;
+  @apply uppercase;
+}
+h2 {
+  @apply text-[3.4rem];
+  @apply font-medium;
+  @apply uppercase;
+}
+h3 {
+  @apply text-[2.9rem];
+  @apply font-roman;
+}
+h4 {
+  @apply text-[1.4rem];
+  @apply font-medium;
+}
+h5 {
+  @apply text-[1.5rem];
+  @apply font-roman;
+}
+@media (max-width: 639px) {
+  /* Mobil: Under sm-breakpoint (640px) */
+  section {
+    @apply py-8;
+  }
+  a {
+    @apply text-smb;
+  }
   input::placeholder,
   textarea::placeholder {
-    @apply text-brown text-s; /* Farve og størrelse */
+    @apply text-smb;
   }
   h1 {
-    @apply text-[4.5rem];
+    @apply text-[1.7rem];
     @apply font-medium;
     @apply uppercase;
   }
   h2 {
-    @apply text-[3.4rem];
+    @apply text-[1.4rem];
     @apply font-medium;
     @apply uppercase;
   }
   h3 {
-    @apply text-[2.9rem];
+    @apply text-[1.2rem];
     @apply font-roman;
   }
   h4 {
-    @apply text-[1.9rem];
+    @apply text-[0.9rem];
     @apply font-roman;
   }
   h5 {
-    @apply text-[1.5rem];
+    @apply text-[0.7rem];
     @apply font-roman;
-  }
-  @media (max-width: 639px) {
-    /* Mobil: Under sm-breakpoint (640px) */
-    section {
-      @apply py-8;
-    }
-    a {
-      @apply text-brown text-smb;
-    }
-    input::placeholder,
-    textarea::placeholder {
-      @apply text-brown text-smb; /* Farve og størrelse */
-    }
-    * {
-      @apply text-brown; /* Bruger en Tailwind farve */
-    }
-    h1 {
-      @apply text-[1.7rem];
-      @apply font-medium;
-      @apply uppercase;
-    }
-    h2 {
-      @apply text-[1.4rem];
-      @apply font-medium;
-      @apply uppercase;
-    }
-    h3 {
-      @apply text-[1.2rem];
-      @apply font-roman;
-    }
-    h4 {
-      @apply text-[0.9rem];
-      @apply font-roman;
-    }
-    h5 {
-      @apply text-[0.7rem];
-      @apply font-roman;
-    }
   }
 }
