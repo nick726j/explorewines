@@ -11,29 +11,29 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
-   <h1 class="ml-16 mb-12">
+   <h1 class="mb-12 ml-8 md:mt-24 mt-16">
       Vinabonnement
     </h1>	
 <section class="">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-16 px-8 md:mb-24 mb-16">
         <!-- Venstre Image -->
     <div class="flex justify-center">
 			<img class="md:object-cover :w-full h-auto" src={abonnementkasse.src} alt="kasse og vin">
     </div>
     <!-- Højre Content -->
-    <div class="space-y-6">
-      <h2 class="uppercase leading-tight">
+    <div class="">
+      <h2 class="uppercase pt-4 md:pt-0">
 Rødvinskasse      </h2>
 <div class="flex items-center justify-between">
-      <h4 class="leading-relaxed">
+      <h4 class="">
 599,- per måned (alt inklusivt)      </h4>
         <a href="/betal"><Button>Køb nu</Button></a>
 </div>
-   <p class="text-smb md:text-m leading-relaxed">
+   <p class="text-smb md:text-m leading-relaxed md:pt-10 pt-8">
 Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!      </p>
 
 
-         <div class="space-y-4 col-start-4">
+         <div class="pt-6 col-start-4">
       <h4 class="text-xl font-bold">Detaljer</h4>
       <ul class="text-smb md:text-m leading-relaxed">
         <li>Antal vine pr. kasse: 8 stk.</li>

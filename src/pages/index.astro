@@ -16,6 +16,9 @@ import tegning1 from "../assets/images/tegning1.svg"
 import herotegning from "../assets/images/logo-u-baggrund-s-tynd.svg"
 import tegning2 from "../assets/images/tegning2.svg"
 import tegning3 from "../assets/images/tegning3.svg"
+import forside1 from "../assets/images/forside1.svg"
+import forside2 from "../assets/images/forside2.svg"
+import forside3 from "../assets/images/forside3.svg"
 import vin1 from "../assets/images/vin1.webp"
 import vin2 from "../assets/images/vin2.webp"
 import vin3 from "../assets/images/vin3.webp"
@@ -104,11 +107,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     </div>
   </div> -->
 
-<div class=" grid grid-cols-1 md:grid-cols-3 gap-16 place-content-between">
+<div class=" mt-6 md:mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 place-content-between">
   <!-- Rødvinskasse -->
   <div class="flex flex-col">
-    <img class="w-[80%] h-[90%] object-contain" src={tegning1.src} alt="rødvinskasse">
-    <div class="pl-4 md:pl-6"> 
+    <img class="w-[85%] h-[100%] object-contain md:ml-2 ml-6" src={forside1.src} alt="rødvinskasse">
+    <div class="pl-6 md:pl-6 md:mt-6 mt-4"> 
       <p class="text-mmb md:text-l mb-1">Rødvinskasse</p>
       <a class="" href="/rodwin"><Button>Køb nu</Button></a>
     </div>
@@ -116,18 +119,18 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 
   <!-- Hvidvinskasse -->
   <div class="flex flex-col">
-    <img class="w-[80%] h-[100%] object-contain" src={tegning2.src} alt="hvidvinskasse">
-    <div class="pl-4 md:pl-0">
+    <img class="w-[85%] h-[120%] object-contain md:ml-16 ml-6" src={forside2.src} alt="hvidvinskasse">
+    <div class="pl-6 md:pl-0 md:ml-16 md:mt-6 mt-4">
       <p class="text-mmb md:text-l mb-1">Hvidvinskasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
     </div>
   </div>
 
   <!-- Mixed kasse -->
-  <div class="flex flex-col">
-    <img class="w-[80%] h-[90%] object-contain" src={tegning3.src} alt="mixedkasse">
-    <div class="pl-4 md:pl-0 ">
-      <p class="text-mmb md:text-l mb-1">Mixed kasse</p>
+  <div class="flex flex-col ">
+    <img class="w-[80%] h-[90%] md:ml-20 object-contain ml-6" src={forside3.src} alt="mixedkasse">
+    <div class="pl-6 md:pl-0 md:ml-20 md:mt-6 mt-4">
+      <p class=" text-mmb md:text-l mb-1">Mixed kasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
     </div>
   </div>
@@ -138,26 +141,29 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   																
   																<!-- Shop section -->
 <!-- Vinsektion -->
-<section class=" text-brown border-y mt-20 md:mt-0">
-  <div class="">
+<section class=" text-brown border-y mt-20 md:mt-0 pb-10 md:pb-10">
+  <div class="mx-auto">
     <!-- Top Sektion: Navigation og Titel -->
-    <div class="flex justify-between items-center md:mb-8">
+    <div class="mt-6 flex justify-between items-center md:mb-8">
       <!-- Piletaster -->
-      <div class="flex gap-4">
+      <div class="flex gap-4 ml-6">
   <Button variant="back"></Button>
   <Button variant="primary"></Button>
       </div>
       <!-- Titel -->
       <h3 class="">Vinflasker</h3>
       <!-- Vinshop Knap -->
-                     <a href="/"><Button>Gå til shop</Button></a>
+       <div class="mr-6">
+<a href="/"><Button>Gå til shop</Button></a>
+       </div>
+                     
 
     </div>
 
     <!-- Produkt Grid -->
-    <div class="grid grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
+    <div class="grid grid-cols-3 lg:grid-cols-5 gap-6 mt-10 md:mb-12 ">
       <!-- Produkt 1 -->
-      <div class="text-center">
+      <div class="text-center h-full">
         <img
           src={vin1.src}
           alt="Jongieux Blanc"
@@ -166,11 +172,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <p class="text-mmb md:text-m">
           2023 Jongieux Blanc, Vin De Savoie AOC, Frankrig
         </p>
-        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
+        <p class="text-smb md:text-s mt-2">450 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 2 -->
-      <div class="text-center">
+      <div class="text-center h-full">
         <img
           src={vin2.src}
           alt="Ikon Alvarinho"
@@ -179,11 +185,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <p class="text-mmb md:text-m">
           2020 Ikon, Alvarinho, Fiuza, Tejo, Portugal
         </hp>
-        <p class="text-smb md:text-s">1074 DKK (6 stk.)</p>
+        <p class="text-smb md:text-s mt-2 ">1074 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 3 -->
-      <div class="text-center">
+      <div class="text-center h-full">
         <img
           src={vin3.src}
           alt="Canallas Vino Blanco"
@@ -192,11 +198,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <p class="text-mmb md:text-m">
           2023 Canallas Vino Blanco, Valencia DOP, Spanien
         </p>
-        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
+        <p class="text-smb md:text-s mt-2">450 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 4 -->
-      <div class="hidden md:block text-center">
+      <div class="hidden md:block text-center h-full">
         <img
           src={vin4.src}
           alt="Vin d'Orange"
@@ -205,11 +211,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <p class="text-mmb md:text-m">
           2023 Vin d'Orange, DR, Øst Frankrig
         </p>
-        <p class="text-smb md:text-s">659 DKK (6 stk.)</p>
+        <p class="text-smb md:text-s mt-2">659 DKK (6 stk.)</p>
       </div>
 
       <!-- Produkt 5 -->
-      <div class="hidden md:block text-center">
+      <div class="hidden md:block text-center h-full">
         <img
           src={vin5.src}
           alt="Zolla Salice Salentino"
@@ -218,7 +224,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <p class="text-mmb md:text-m">
           2021 Zolla, Salice Salentino DOP, Italien
         </hp>
-        <p class="text-smb md:text-s">450 DKK (6 stk.)</p>
+        <p class="text-smb md:text-s mt-2">450 DKK (6 stk.)</p>
       </div>
     </div>
   </div>
@@ -255,8 +261,8 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 </section>
 
   																<!-- Nyhedsbrev section -->
-												<section class="">
-  <div class=" grid grid-cols-1 md:grid-cols-2 items-center md:gap-14 gap-8">
+		<section class="md:mt-36 md:mb-36 md:pl-10">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-14 gap-8">
     <!-- Venstre Content -->
 	   <div class="flex justify-center">
 			<img class="hidden md:block md:object-cover :w-full h-auto" src={collage.src} alt="Samling af stemningsbilleder">
