@@ -7,181 +7,220 @@ import thumbsup from "../assets/images/thumbsup.png";
 import collage from "../assets/images/collage.png"
 import omostegning from "../assets/images/om-os-tegning.svg";
 import omos from "../assets/images/om.webp";
+import fbicon from "../assets/images/fb.svg"
+import igicon from "../assets/images/ig.svg"
 
 ---
 <MainLayout title="Titel">
-	<article class=" mx-auto">
+  <article class="mx-auto px-4 md:px-8 py-8">
 
-  <!-- Venstre del af grid -->
+    <!-- Første Sektion -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <!-- Venstre Indhold -->
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-6">
+          Om ExploreWines
+        </h1>
+        <p class="text-smb md:text-m leading-relaxed mb-6">
+Hos Explorewines er vores mission at pirre dine smagsløg og give dig unikke vinoplevelser. Brug vores månedskasse til at opdage nye favoritter, hold vinsmagninger med vennerne, eller glæd dig over valgfriheden i vinreolen, når det er tid til at finde den perfekte flaske til weekenden. Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris.<br>
 
-<section class=" grid grid-cols-2">
-	<div>    
-	<h1 class="text-3xl md:text-4xl font-bold uppercase text-red-600 mb-12">
-      Om ExploreWines
-    </h1>
-	<p class=" text-smb md:text-m leading-relaxed">Hos Explorewines er vores mission at pirre dine smagsløg og give dig unikke vinoplevelser. Brug vores månedskasse til at opdage nye favoritter, hold vinsmagninger med vennerne, eller glæd dig over valgfriheden i vinreolen, når det er tid til at finde den perfekte flaske til weekenden. Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris.
-        <br> <br>
+<br>Explorewines samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine.<br>
 
-Explorewines samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine.
-<br> <br>
-Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfor.</p>
-<Button>Kontakt</Button>
+<br>Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfor.        </p>
+        <Button>Kontakt</Button>
 
-<div class="relative font-inter antialiased">
-  <!-- fold ud tekst component -->
-
-        <div class="w-full mx-auto py-24">
-
-
-            <!-- Accordion component -->
-            <div class="divide-y divide-black">
-                <!-- Accordion item -->
-                <div x-data="{ expanded: false }" class="py-2">
-                    <p class="text-mmb md:text-m">
-                        <button
-                            id="faqs-title-01"
-                            type="button"
-                            class="flex items-center justify-between w-full text-left font-semibold py-2"
-                            @click="expanded = !expanded"
-                            :aria-expanded="expanded"
-                            aria-controls="faqs-text-01"
-                        >
-                            <span>BAGGRUND:</span>
-                            <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                            </svg>
-                        </button>
-                    </p>
-                    <div
-                        id="faqs-text-01"
-                        role="region"
-                        aria-labelledby="faqs-title-01"
-                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
-                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                        >
-                        <div class="overflow-hidden">
-                            <p class=" text-smb md:text-s pb-3">
+          <!-- Accordion component -->
+           <div class="divide-y divide-black">
+               <!-- Accordion item -->
+               <div x-data="{ expanded: false }" class="py-2">
+                   <p class="text-mmb md:text-m">
+                       <button
+                           id="faqs-title-01"
+                           type="button"
+                           class="flex items-center justify-between w-full text-left font-semibold py-2"
+                           @click="expanded = !expanded"
+                           :aria-expanded="expanded"
+                           aria-controls="faqs-text-01"
+                       >
+                           <span>BAGGRUND:</span>
+                           <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                           </svg>
+                       </button>
+                   </p>
+                   <div
+                       id="faqs-text-01"
+                       role="region"
+                       aria-labelledby="faqs-title-01"
+                       class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                       :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                       >
+                       <div class="overflow-hidden">
+                           <p class=" text-smb md:text-s pb-3">
 Vi har haft base i Aarhus siden 2006, hvor Jens Peter Lund grundlagde Explorewines. <br> <br> I dag drives vi af Dorthe og Per, der brænder for at dele den begejstring, vi selv har oplevet gennem mange års vinrejser.                             </p>
-                        </div>
-                    </div>
-                </div> 
-				
-				 <!-- Accordion item -->
-                <div x-data="{ expanded: false }" class="py-2">
-                    <p class="text-mmb md:text-m">
-                        <button
-                            id="faqs-title-01"
-                            type="button"
-                            class="flex items-center justify-between w-full text-left font-semibold py-2"
-                            @click="expanded = !expanded"
-                            :aria-expanded="expanded"
-                            aria-controls="faqs-text-01"
-                        >
-                            <span>MISSION:</span>
-                            <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                            </svg>
-                        </button>
-                    </p>
-                    <div
-                        id="faqs-text-01"
-                        role="region"
-                        aria-labelledby="faqs-title-01"
-                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
-                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                        >
-                        <div class="overflow-hidden">
-                            <p class="text-smb md:text-s pb-3">
-Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris. <br> <br> Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine. Vi samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. 
+                       </div>
+                   </div>
+               </div>
+              
+                <!-- Accordion item -->
+               <div x-data="{ expanded: false }" class="py-2">
+                   <p class="text-mmb md:text-m">
+                       <button
+                           id="faqs-title-01"
+                           type="button"
+                           class="flex items-center justify-between w-full text-left font-semibold py-2"
+                           @click="expanded = !expanded"
+                           :aria-expanded="expanded"
+                           aria-controls="faqs-text-01"
+                       >
+                           <span>MISSION:</span>
+                           <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                           </svg>
+                       </button>
+                   </p>
+                   <div
+                       id="faqs-text-01"
+                       role="region"
+                       aria-labelledby="faqs-title-01"
+                       class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                       :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                       >
+                       <div class="overflow-hidden">
+                           <p class="text-smb md:text-s pb-3">
+Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris. <br> <br> Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine. Vi samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne.
 <br> <br>
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Hos ExploreWines.dk har vi skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
-                    </div>
-                </div>                                                                                            
-            
-			 <!-- Accordion item -->
-                <div x-data="{ expanded: false }" class="py-2">
-                    <p class="text-mmb md:text-m">
-                        <button
-                            id="faqs-title-01"
-                            type="button"
-                            class="flex items-center justify-between w-full text-left font-semibold py-2"
-                            @click="expanded = !expanded"
-                            :aria-expanded="expanded"
-                            aria-controls="faqs-text-01"
-                        >
-                            <span>VORES KONCEPT:</span>
-                            <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                            </svg>
-                        </button>
-                    </p>
-                    <div
-                        id="faqs-text-01"
-                        role="region"
-                        aria-labelledby="faqs-title-01"
-                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
-                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                        >
-                        <div class="overflow-hidden">
-                            <p class="text-smb md:text-s pb-3">
+                   </div>
+               </div>                                                                                           
+          
+            <!-- Accordion item -->
+               <div x-data="{ expanded: false }" class="py-2">
+                   <p class="text-mmb md:text-m">
+                       <button
+                           id="faqs-title-01"
+                           type="button"
+                           class="flex items-center justify-between w-full text-left font-semibold py-2"
+                           @click="expanded = !expanded"
+                           :aria-expanded="expanded"
+                           aria-controls="faqs-text-01"
+                       >
+                           <span>VORES KONCEPT:</span>
+                           <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                           </svg>
+                       </button>
+                   </p>
+                   <div
+                       id="faqs-text-01"
+                       role="region"
+                       aria-labelledby="faqs-title-01"
+                       class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                       :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                       >
+                       <div class="overflow-hidden">
+                           <p class="text-smb md:text-s pb-3">
 Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement.  <br>
+
 
 Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
 <br> <br> Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Kassen sammensættes, så der både er gode hverdagsvine til et velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du skænker den for dine venner.
 <br> <br>
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Vi har skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
-                    </div>
-                </div> 
-				 <!-- Accordion item -->
-                <div x-data="{ expanded: false }" class="py-2">
-                    <p class="text-mmb md:text-m">
-                        <button
-                            id="faqs-title-01"
-                            type="button"
-                            class="flex items-center justify-between w-full text-left font-semibold py-2"
-                            @click="expanded = !expanded"
-                            :aria-expanded="expanded"
-                            aria-controls="faqs-text-01"
-                        >
-                            <span>KONTAKT OS:</span>
-                            <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                                <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
-                            </svg>
-                        </button>
-                    </p>
-                    <div
-                        id="faqs-text-01"
-                        role="region"
-                        aria-labelledby="faqs-title-01"
-                        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out "
-                        :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                        >
-                        <div class="overflow-hidden">
-                            <p class="text-smb md:text-s pb-3">
+                   </div>
+               </div>
+                <!-- Accordion item -->
+               <div x-data="{ expanded: false }" class="py-2">
+                   <p class="text-mmb md:text-m">
+                       <button
+                           id="faqs-title-01"
+                           type="button"
+                           class="flex items-center justify-between w-full text-left font-semibold py-2"
+                           @click="expanded = !expanded"
+                           :aria-expanded="expanded"
+                           aria-controls="faqs-text-01"
+                       >
+                           <span>KONTAKT OS:</span>
+                           <svg class="black shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                               <rect y="7" width="24" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                           </svg>
+                       </button>
+                   </p>
+                   <div
+                       id="faqs-text-01"
+                       role="region"
+                       aria-labelledby="faqs-title-01"
+                       class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out "
+                       :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                       >
+                       <div class="overflow-hidden">
+                           <p class="text-smb md:text-s pb-3">
 Hos ExploreWines sælger vi både enkelte vinflasker og vin på abonnement. <br> <br>
+
 
 Vores vinabonnementskoncept er simpelt: Bestilt din fortrukne vinkasse og få den leveret til døren fast hver måned. Ønsker du at pause eller afmelde dit abonnement skal du blot gøre det senest d. 15. i måneden her på hjemmesiden.
 Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Kassen sammensættes, så der både er gode hverdagsvine til et velfortjent glas en tirsdag aften og vine, du vil høste anerkendelse for, når du skænker den for dine venner.
 
-<br> <br> 
+
+<br> <br>
 Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan garantere, at du får vin for alle pengene. Vi har skåret alle fordyrende mellemled fra, så vi handler direkte med de lokale vinproducenter uden grossist- og detailled. Det er grunden til, at vi kan tilbyde store vine til små penge.                        </div>
-                    </div>
-                </div> 
-            <!-- End: Accordion component -->
+                   </div>
+               </div>
 
+
+       </div>
+           <!-- End: Accordion component -->
+
+      </div>
+
+      <!-- Højre Billede -->
+      <div class="flex justify-center items-center">
+        <img src={omos.src} alt="Vinflasker" class="w-full h-auto object-fit md:h-[900px]">
+      </div>
+    </section>
+
+    <!-- Anden Sektion -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 items-center">
+      <!-- Venstre Tegning -->
+      <div>
+        <img src={omostegning.src} alt="Tegning" class="w-full h-auto object-cover">
+      </div>
+
+      <!-- Højre Indhold -->
+      <div class="md:text-left">
+        <p class="tracking-wide mb-2">Mere fra Explorewines</p>
+        <h2 class="uppercase font-bold mb-4">FØLG VORES HVERDAG</h2>
+        <p class="text-smb md:text-m mb-6">
+          Vil du følge med i vores hverdag, få nyheder om nye produkter og deltage i spændende konkurrencer?
+          Så følg os på vores sociale medieprofiler.
+        </p>
+        <!-- Sociale Medier -->
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="#" aria-label="Facebook">
+            <img src={fbicon.src} alt="Facebook" class="w-6 h-6">
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src={igicon.src} alt="Instagram" class="w-6 h-6">
+          </a>
         </div>
-		
-		
+      </div>
+    </section>
 
-</div>
-</div>
-	</div>
-	  <div class="flex justify-center">
-			<img class="md:object-cover :w-full h-auto" src={omostegning.src} alt="Vinflasker opstillet">
-    </div>
-</section>
+  </article>
+</MainLayout>
+
+
+
+
+
+
+
+
+
+
+
 
