@@ -1,22 +1,49 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import { Image } from 'astro:assets';
-const {cardimage="", cardimagealt="", navn="", land="", aarstal="",}= Astro.props;
-import Link from "../components/Link.astro";
+const { cardimage = "", cardimagealt = "", navn = "", land = "", aarstal = "", nr = "",  description = "" } = Astro.props;
 ---
 
-<article class="card @container border-1 border-brown lg:px-2 px-12 pb-4">
-    <div class="flex flex-col h-full">
-        <div class="relative pt-4">
-            <img src={cardimage} alt={cardimagealt} class="object-cover w-full">
+<article x-data="{ open: false }" class="card py-4 px-4">
+    <!-- Mobile Grid Layout -->
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-1">
+        <!-- Image -->
+        <div class="aspect-[3/4] md:aspect-full overflow-hidden">
+            <img 
+                src={cardimage} 
+                alt={cardimagealt} 
+                class="w-full h-full object-cover"
+            />
         </div>
-        <div class="grid grid-cols-3 grid-rows-2 ">
-    <p class="text-m md:text-l pl-2 text-left col-span-2 row-span-2  ">{navn}</p>
-    <p class="text-m md:text-l pl-2 text-left place-self-end">{land}</p>
-    <p class="text-m md:text-l pl-2 text-left place-self-end">{aarstal}</p>
+
+        <!-- Content -->
+        <div class="flex flex-col">
+            <div>
+                <p class="md:hidden text-l text-brown">{nr}</p>
+                <p class="text-l text-brown">{navn}, {land} / {aarstal}</p>
+            </div>
+            <!-- Accordion Button -->
+            <button 
+                @click="open = !open" 
+                class="md:hidden mt-4 w-40 h-10 border border-brown text-brown px-6 py-2 rounded-full hover:bg-brown hover:text-creamywhite transition flex items-center justify-between basis-0"
+            >
+                Læs mere
+                <span class="ml-2 transform transition-transform" :class="{'rotate-180': open}">↑</span>
+            </button>
+        </div>
     </div>
-        <Button>Læs mere</Button>
-    </div>  
-      
+
+    <!-- Accordion Content -->
+    <div 
+        x-show="open" 
+        x-transition 
+        class="p-4 bg-brown text-creamywhite grid gap-4 md:hidden"
+    >
+        <p class="text-l text-creamywhite mb-2">{navn}, {land} / {aarstal}</p>
+        <p class="text-smb leading-relaxed">
+            {description}
+        </p>
+        <div class="mt-4">
+            <Button>Køb nu</Button>
+        </div>
+    </div>
 </article>
