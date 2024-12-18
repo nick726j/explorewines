@@ -26,11 +26,98 @@ import vin4 from "../assets/images/vin4.webp"
 import vin5 from "../assets/images/vin5.webp"
 import hero1 from "../assets/images/endelig1.webp"
 import hero2 from "../assets/images/hero1.webp"
+import herotextfulg from "../assets/images/herotextfulg.svg"
+import Udforsk from "../assets/images/Udforsk.svg"
+import Udforskmobil from "../assets/images/knapheromobil.svg"
+
+
 
 ---
 <MainLayout title="Titel">
-	<article class="mx-auto">
-																	 <!-- Hero section  -->
+	<article class="">
+																	 <!-- Hero section desktop  -->
+<section class="relative mb-40 h-2/3 hidden md:block">
+  
+
+  <!-- Grid container -->
+  <div class="grid grid-cols-2 h-full w-full">
+
+    <!-- Venstre side -->
+    <div class=" ">
+      <img 
+        src={hero2.src} 
+        alt="Venstre billede"
+        class="object-cover w-full h-[50rem]"
+      >
+        <!-- SVG Overlay (Venstre side) -->
+  <div class="absolute left-16 bottom-20 w-2/3 h-2/3 z-10 flex items-center justify-center max-h-full">
+    <img 
+      src={herotextfulg.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+  </div>
+    </div>
+
+    <!-- Højre side -->
+    <div class=" z-0 flex items-center justify-center">
+      <img 
+        src={hero1.src} 
+        alt="Højre billede"
+        class="object-cover w-full h-[50rem] mt-20"
+      >
+      
+      <!-- Overlay Tekst Knappen -->
+    <div class="absolute top-0 px-4 z-10 flex items-center justify-center max-h-full">
+      <a href="/abonnement">
+    <img 
+      src={Udforsk.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+    </a>
+  </div>
+    </div>
+  </div>
+</section>
+																	 <!-- Hero section mobile  -->
+<section class="relative mb-10 h-2/3  md:hidden">
+  
+
+  <!-- Grid container -->
+  <div class="flex h-full w-full">
+
+  <div class="absolute pt-5 px-4 z-10 flex items-center justify-center max-h-full">
+    <img 
+      src={herotextfulg.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+  </div>
+    </div>
+
+    <!-- Højre side -->
+    <div class=" z-0 flex items-center justify-center">
+      <img 
+        src={hero1.src} 
+        alt="Højre billede"
+        class="object-cover w-full h-full]"
+      >
+      
+      <!-- Overlay Tekst Knappen -->
+    <div class="absolute px-4 bottom-2 z-10 flex items-center justify-center max-h-full">
+      <a href="/abonnement">
+    <img 
+      src={Udforskmobil.src} 
+      alt="SVG ikon"
+      class="w-screen h-auto"
+    >
+    </a>
+  </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -39,13 +126,13 @@ import hero2 from "../assets/images/hero1.webp"
 
 <section class=" text-brown mb-12 md:mb-28">
   <!-- Heading -->
-  <div class="mx-auto px-4 md:px-6">
+  <div class=" px-4 md:px-6">
     <h3 class="">
 Med vores vinabonnement får du mulighed for at smage forskellige vine hver måned. Vi udvælger og sammensætter tre forskellige vinkasser, som du kan vælge imellem.    </h3>
   </div>
 
   <!-- Abonnenter -->
-  <!-- <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+  <!-- <div class=" grid grid-cols-1 md:grid-cols-3 gap-16">
     <div class="">
 	<img class="md:object-cover md:w-full md:h-full" src={tegning1.src} alt="rødvinskasse">
   <div class="pl-4 md:pl-6"> 
@@ -115,7 +202,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
       <!-- Piletaster -->
       <div class="flex gap-4 ml-6">
   <Button variant="back"></Button>
-  <Button variant="primary"></Button>
+  <Button variant="forward"></Button>
       </div>
       <!-- Titel -->
       <h3 class="">Vinflasker</h3>
@@ -134,7 +221,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <img
           src={vin1.src}
           alt="Jongieux Blanc"
-          class="mx-auto mb-4"
+          class=" mb-4"
         />
         <p class="text-mmb md:text-m">
           2023 Jongieux Blanc, Vin De Savoie AOC, Frankrig
@@ -147,7 +234,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <img
           src={vin2.src}
           alt="Ikon Alvarinho"
-          class="mx-auto mb-4"
+          class=" mb-4"
         />
         <p class="text-mmb md:text-m">
           2020 Ikon, Alvarinho, Fiuza, Tejo, Portugal
@@ -160,7 +247,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <img
           src={vin3.src}
           alt="Canallas Vino Blanco"
-          class="mx-auto mb-4"
+          class=" mb-4"
         />
         <p class="text-mmb md:text-m">
           2023 Canallas Vino Blanco, Valencia DOP, Spanien
@@ -173,7 +260,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <img
           src={vin4.src}
           alt="Vin d'Orange"
-          class="mx-auto mb-4"
+          class=" mb-4"
         />
         <p class="text-mmb md:text-m">
           2023 Vin d'Orange, DR, Øst Frankrig
@@ -186,7 +273,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         <img
           src={vin5.src}
           alt="Zolla Salice Salentino"
-          class="mx-auto mb-4"
+          class=" mb-4"
         />
         <p class="text-mmb md:text-m">
           2021 Zolla, Salice Salentino DOP, Italien
@@ -201,7 +288,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 <!-- Vinklub section -->
 
 <section class="">
-  <div class=" md:mt-20 mb-12 mt-12 md:mb-20 mx-auto grid grid-cols-1 md:grid-cols-7 items-center gap-8">
+  <div class=" md:mt-20 mb-12 mt-12 md:mb-20  grid grid-cols-1 md:grid-cols-7 items-center gap-8">
     <!-- Venstre Content -->
     <div class="md:col-span-3 ml-6 md:ml-16">
       <p class="  text-m md:text-l">

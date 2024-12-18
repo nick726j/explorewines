@@ -13,22 +13,26 @@ import igicon from "../assets/images/ig.svg"
   <article class="mx-auto px-4 md:px-8 py-8">
 
     <!-- Første Sektion -->
-	     <h1 class="mb-6">
+	     <h1 class="mb-4 md:mb-6 b-12 ml-6 md:mr-0 md:mt-24 mt-16">
           Om ExploreWines
         </h1>
-    <section class="grid grid-cols-1 md:grid-cols-2 md:gap-36 items-start">
+    <section class="ml-6 mr-6 md:mr-0 grid grid-cols-1 md:grid-cols-2 md:gap-36 items-start">
       <!-- Venstre Indhold -->
       <div class="order-2 md:order-1">
-        <p class="text-smb md:text-m leading-relaxed mb-6">
+        <p class="text-smb md:text-m leading-relaxed mb-6 ">
 Hos Explorewines er vores mission at pirre dine smagsløg og give dig unikke vinoplevelser. Brug vores månedskasse til at opdage nye favoritter, hold vinsmagninger med vennerne, eller glæd dig over valgfriheden i vinreolen, når det er tid til at finde den perfekte flaske til weekenden. Vores mål er at levere kvalitetsvine, der giver dig lyst til en slurk mere – fordi de smager fantastisk og samtidig er rimelige i pris.<br>
 
 <br>Explorewines samarbejder primært med små, lokale producenter, der skaber vine med personlighed og sjæl – og som du sjældent finder på supermarkedshylderne. Vi prioriterer altid kvalitet først og har en særlig forkærlighed for økologiske vine.<br>
 
 <br>Har du spørgsmål til os er du velkommen til at kontakte os via knappen nedenfor.</p>
-        <Button>Kontakt</Button>
+
+    <div class="mb-12 md:mb-48">
+      <Button>Kontakt</Button>
+    </div>
+        
 
           <!-- Accordion component -->
-           <div class="divide-y divide-black">
+           <div class="divide-y divide-black ">
                <!-- Accordion item -->
                <div x-data="{ expanded: false }" class="py-2">
                    <p class="text-mmb md:text-m">
@@ -180,7 +184,8 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
   <img 
     src={omos.src} 
     alt="Vinflasker" 
-    class="w-full h-auto md:max-w-[900px] object-contain"
+    class="mb-8 md:mb-0 w-full h-auto md:max-w-[900px] object-contain"
+  
   >
 </div>
     </section>
@@ -189,24 +194,24 @@ Vi har sat prisen for vinkasserne inklusive levering til kr. 599,- og vi kan gar
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 items-center">
       <!-- Venstre Tegning -->
       <div>
-        <img src={omostegning.src} alt="Tegning" class="w-full h-auto object-cover">
+        <img src={omostegning.src} alt="Tegning" class=" ml-12 md:ml-20 w-[70%] h-[90%] object-cover">
       </div>
 
       <!-- Højre Indhold -->
       <div class="md:text-left">
-        <p class="tracking-wide mb-2">Mere fra Explorewines</p>
-        <h2 class="uppercase font-bold mb-4">FØLG VORES HVERDAG</h2>
-        <p class="text-smb md:text-m mb-6">
+        <p class="tracking-wide mb-2 ml-6 md:ml-0">Mere fra Explorewines</p>
+        <h2 class="uppercase font-bold mb-4 ml-6 md:ml-0">FØLG VORES HVERDAG</h2>
+        <p class="text-smb md:text-m mb-4 ml-6 md:ml-0">
           Vil du følge med i vores hverdag, få nyheder om nye produkter og deltage i spændende konkurrencer?
           Så følg os på vores sociale medieprofiler.
         </p>
         <!-- Sociale Medier -->
-        <div class="flex justify-center md:justify-start space-x-4">
+        <div class=" ml-6 md:ml-0 flex md:justify-start space-x-4">
           <a href="#" aria-label="Facebook">
-            <img src={fbicon.src} alt="Facebook" class="w-6 h-6">
+            <img src={fbicon.src} alt="Facebook" class="w-10 h-10">
           </a>
           <a href="#" aria-label="Instagram">
-            <img src={igicon.src} alt="Instagram" class="w-6 h-6">
+            <img src={igicon.src} alt="Instagram" class="w-10 h-10">
           </a>
         </div>
       </div>
