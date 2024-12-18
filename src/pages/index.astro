@@ -34,7 +34,7 @@ import hero2 from "../assets/images/hero1.webp"
 
   															<!-- Abonnenter section -->
 
-<section class=" text-brown mb-12 md:mb-32">
+<section class=" text-brown mb-12 md:mb-28">
   <!-- Heading -->
   <div class="mx-auto px-4 md:px-6">
     <h3 class="pb-8">
@@ -42,7 +42,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   </div>
 
   <!-- Abonnenter -->
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+  <!-- <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
     <div class="">
 	<img class="md:object-cover md:w-full md:h-full" src={tegning1.src} alt="rødvinskasse">
   <div class="pl-4 md:pl-6"> 
@@ -69,13 +69,43 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     
 
     </div>
+  </div> -->
+
+<div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 place-content-between">
+  <!-- Rødvinskasse -->
+  <div class="flex flex-col">
+    <img class="w-[80%] h-[90%] object-contain" src={tegning1.src} alt="rødvinskasse">
+    <div class="pl-4 md:pl-6"> 
+      <p class="text-mmb md:text-l mb-1">Rødvinskasse</p>
+      <a class="" href="/rodwin"><Button>Køb nu</Button></a>
+    </div>
   </div>
+
+  <!-- Hvidvinskasse -->
+  <div class="flex flex-col">
+    <img class="w-[80%] h-[100%] object-contain" src={tegning2.src} alt="hvidvinskasse">
+    <div class="pl-4 md:pl-0">
+      <p class="text-mmb md:text-l mb-1">Hvidvinskasse</p>
+      <a href="/rodwin"><Button>Køb nu</Button></a>
+    </div>
+  </div>
+
+  <!-- Mixed kasse -->
+  <div class="flex flex-col">
+    <img class="w-[80%] h-[90%] object-contain" src={tegning3.src} alt="mixedkasse">
+    <div class="pl-4 md:pl-0 ">
+      <p class="text-mmb md:text-l mb-1">Mixed kasse</p>
+      <a href="/rodwin"><Button>Køb nu</Button></a>
+    </div>
+  </div>
+</div>
+
 </section>
 
   																
   																<!-- Shop section -->
 <!-- Vinsektion -->
-<section class=" text-brown border-y ">
+<section class=" text-brown border-y mt-20 md:mt-0">
   <div class="mx-auto">
     <!-- Top Sektion: Navigation og Titel -->
     <div class="flex justify-between items-center md:mb-8">
@@ -92,7 +122,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     </div>
 
     <!-- Produkt Grid -->
-    <div class="grid grid-cols-3 lg:grid-cols-5 gap-6">
+    <div class="grid grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
       <!-- Produkt 1 -->
       <div class="text-center">
         <img
