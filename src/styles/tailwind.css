@@ -52,11 +52,9 @@ h3 {
 }
 h4 {
   @apply text-[1.4rem];
-  @apply font-medium;
 }
 h5 {
   @apply text-[1.5rem];
-  @apply font-roman;
 }
 @media (max-width: 639px) {
   /* Mobil: Under sm-breakpoint (640px) */
