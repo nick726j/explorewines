@@ -9,6 +9,8 @@ import { useGSAP } from '@gsap/react';
 import bordvin from "../assets/images/bordvin.svg";
 import logo from "../assets/images/logo.svg";
 import collage from "../assets/images/collage.webp"
+import collagemobil from "../assets/images/collagemobil.png"
+import collagem from "../assets/images/collagem.png"
 import Anmeldelser from "../components/Anmeldelser.astro";
 import tegning1 from "../assets/images/tegning1.svg"
 import herotegning from "../assets/images/logo-u-baggrund-s-tynd.svg"
@@ -163,22 +165,22 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 <!-- Vinklub section -->
 
 <section class="">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-5 items-center gap-8">
+  <div class=" md:mt-10 mb-12 mt-12 md:mb-10 mx-auto grid grid-cols-1 md:grid-cols-5 items-center gap-8">
     <!-- Venstre Content -->
     <div class="md:col-span-2">
-      <p class="text-m md:text-l">
+      <p class=" ml-6 md:mr-0 md:ml-16 text-m md:text-l">
         Vin på abonnement
       </p>
-      <h2 class="uppercase mb-4 mt-2">
+      <h2 class="flex ml-6 md:ml-16 uppercase mb-2  ">
         Oplev vores vinklub
       </h2>
-      <p class="text-mmb md:text-m  ">
-        Når du bliver abonnent hos os, bliver du samtidig en del af vores vinklub.
-      </p>
-      <p class="text-mmb md:text-m my-2 ">
-        Vi mødes én gang hver måned og smager på næste måneds vin, så du får mulighed for at tilpasse din næste vinkasse til dine ønsker og behov. Derudover udveksler vi erfaringer og viden om vin og har nogle hyggelige stunder sammen.
-      </p>
-<Button>Bliv abonnent</Button>
+      <p class="ml-6 md:ml-16 text-mmb md:text-m mr-6 md:mr-0 ">
+        Når du bliver abonnent hos os, bliver du samtidig en del af vores vinklub.  Vi mødes én gang hver måned og smager på næste måneds vin, så du får mulighed for at tilpasse din næste vinkasse til dine ønsker og behov. Derudover udveksler vi erfaringer og viden om vin og har nogle hyggelige stunder sammen.
+      </p>     
+    
+        <div class="mt-4 ml-6 md:ml-16">
+              <Button>Bliv abonnent</Button>
+        </div>
 
     </div>
 
@@ -191,18 +193,19 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 
   																<!-- Nyhedsbrev section -->
 												<section class="">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-14 gap-8">
     <!-- Venstre Content -->
 	   <div class="flex justify-center">
-			<img class="md:object-cover :w-full h-auto" src={collage.src} alt="Samling af stemningsbilleder">
+			<img class="hidden md:block md:object-cover :w-full h-auto" src={collage.src} alt="Samling af stemningsbilleder">
+			<img class="pl-10 pr-10 md:pr-0 md:pl-0 md:hidden md:object-cover :w-full h-auto" src={collagem.src} alt="Samling af stemningsbilleder">
      </div>
 
     <!-- Højre Content-->
-    <div class="">
-      <p class="tracking-wide text-m md:text-l">Tilmelding til nyhedsbrev</p>
-      <h2 class="uppercase leading-tight mb-4 mt-2">FÅ 10% PÅ DIN FØRSTE ORDRE</h2>
+    <div class="mb-20">
+      <p class=" ml-6 md:mr-0 md:ml-16 tracking-wide text-m md:text-l">Tilmelding til nyhedsbrev</p>
+      <h2 class=" ml-6 md:mr-0 md:ml-16 uppercase leading-tight mb-4 mt-2">FÅ 10% PÅ DIN FØRSTE ORDRE</h2>
         <!--  Input fælt -->
-    <form class="flex flex-row items-center  overflow-hidden">
+    <form class=" ml-6 md:mr-20 md:ml-16 mr-6 flex flex-row items-center  overflow-hidden">
       <input 
         type="email" 
         placeholder="Skriv din e-mail her..." 
@@ -215,7 +218,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
         →
       </button>
     </form>
-      <p class="text-smb md:text-s  mt-2">
+      <p class=" ml-6 md:mr-20 md:ml-16 text-smb md:text-s  mt-2">
 Ved tilmelding til nyhedsbrevet accepterer jeg at modtage nyheder, tilbud og inspiration fra ExploreWines via e-mail. Jeg kan til enhver tid afmelde mig via linket i bunden af nyhedsbrevet. Oplysningerne behandles i overensstemmelse med ExploreWines' privatlivspolitik.      </p>
     </div>
 
