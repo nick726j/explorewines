@@ -27,44 +27,61 @@ import vin5 from "../assets/images/vin5.webp"
 import hero1 from "../assets/images/endelig1.webp"
 import hero2 from "../assets/images/hero1.webp"
 import herotextfulg from "../assets/images/herotextfulg.svg"
+import Udforsk from "../assets/images/Udforsk.svg"
+
 
 
 ---
 <MainLayout title="Titel">
 	<article class="">
 																	 <!-- Hero section  -->
-<section class="relative">
-  <!-- Grid container -->
-  <div class="grid grid-cols-12 grid-rows-5 gap-0 max-h-screen">
+<section class="relative mb-40 h-2/3">
+  
 
-    <!-- Venstre side (forskudt nedad ved højere grid row) -->
-     
-    <div class="col-span-6 row-start-1 row-span-4 relative">
+  <!-- Grid container -->
+  <div class="grid grid-cols-2 h-full w-full">
+
+    <!-- Venstre side -->
+    <div class=" ">
       <img 
         src={hero2.src} 
         alt="Venstre billede"
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-[50rem]"
       >
+        <!-- SVG Overlay (Venstre side) -->
+  <div class="absolute left-16 bottom-20 w-2/3 h-2/3 z-10 flex items-center justify-center max-h-full">
+    <img 
+      src={herotextfulg.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+  </div>
     </div>
-   <!-- Overlay Tekst Knappen -->
-      <div class="col-span-6 text-brown place-content-center place-items-center">
-       <p class="text-[2rem]">
-          UDFORSK UDVALG 
-          <span class="text-xl">&rarr;</span> <!-- Pilen -->
-       </p>
-      </div>
-    <!-- Højre side (starter i grid row 1) -->
-     
-    <div class="col-span-6 row-start-2 row-span-5 relative z-10">
+
+    <!-- Højre side -->
+    <div class=" z-0 flex items-center justify-center">
       <img 
         src={hero1.src} 
         alt="Højre billede"
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-[50rem] mt-20"
       >
+      
+      <!-- Overlay Tekst Knappen -->
+    <div class="absolute top-0 px-4 z-10 flex items-center justify-center max-h-full">
+      <a href="/abonnement">
+    <img 
+      src={Udforsk.src} 
+      alt="SVG ikon"
+      class="w-full h-auto"
+    >
+    </a>
+  </div>
     </div>
-
   </div>
 </section>
+
+
+
 
 
 
