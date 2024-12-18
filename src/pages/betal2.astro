@@ -40,7 +40,7 @@ import step2 from "../assets/images/2_3.svg";
               type="text"
               id="fullName"
               placeholder="Indtast dit fulde navn..."
-              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
+              class="w-full border bg-creamywhite border-brown text-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
 
@@ -51,7 +51,7 @@ import step2 from "../assets/images/2_3.svg";
               type="email"
               id="email"
               placeholder="Indtast din email-adresse..."
-              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
+              class="w-full border bg-creamywhite border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
 
@@ -62,18 +62,25 @@ import step2 from "../assets/images/2_3.svg";
               type="tel"
               id="phone"
               placeholder="Indtast dit telefon nummer..."
-              class="w-full border border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
+              class="w-full border bg-creamywhite border-brown p-3 focus:outline-none focus:ring-2 focus:ring-brown"
             />
           </div>
         </form>
           <!-- Knapper -->
           <div class="flex justify-center gap-4">
+
+            <div class="flex justify-center gap-4 mt-8">
+          <!-- Tilbage Knap -->
+          <a href="javascript:history.back()">
+            <Button variant="back"></Button>
+          </a>
+          
             <!-- Tilbage Knap -->
-            <a href="/betal">
-              <Button variant="secondary"></Button>
-            </a>
+           
             <!-- Næste Knap -->
             <a href="/betal3"><Button>Næste</Button></a>
+
+            
           </div>
           
       </div>
