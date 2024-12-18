@@ -4,18 +4,21 @@ import buttonarrow from "../assets/images/buttonarrow.svg"
 const { variant = "primary" } = Astro.props;
 
 const buttonStyling =
-  "group border border-brown py-1 px-3 md:px-4 text-smb md:text-s rounded-3xl inline-flex flex-nowrap items-center gap-3 justify-between hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors";
+  "group border py-1 px-3 md:px-4 text-smb md:text-s rounded-3xl inline-flex flex-nowrap items-center gap-3 justify-between";
+// border-brown hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors
+const variantClasses = {
+  primary: "border-brown hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors",
+  secondary: "border-creamywhite hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors",
+};
+
 ---
 <div>
-  <button
-    class={`${buttonStyling}`}
-    aria-label="Navigate to next page"
-  >
+ <button class:list={[buttonStyling, variantClasses[variant],]}>
     <slot></slot>
     <!-- SVG med rotation og fill ændring -->
     <svg
       class={`w-4 h-4 md:w-6 md:h-6 transition-colors group-hover:fill-creamywhite ${
-        variant === "secondary" ? "rotate-180" : ""
+        variant === "back" ? "rotate-180" : ""
       }`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 13 8"

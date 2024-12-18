@@ -24,9 +24,6 @@
   }
 }
 
-section {
-  @apply py-16;
-}
 a {
   @apply text-s;
 }
