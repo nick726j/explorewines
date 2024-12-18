@@ -8,14 +8,10 @@ import filler from "../assets/images/filler.png";
 import Card from "../components/Card.astro";
 import abonnementkasse from "../assets/images/abonnementkasse.svg";
 import Anmeldelser from "../components/Anmeldelser.astro";
-
-
-
-
 ---
 <MainLayout title="Titel">
 	<article class="mx-auto">
-   <h1 class="ml-16 mb-12">
+   <h1 class="mb-12 md:ml-8 ml-8 md:mt-24 mt-16">
       Vinabonnement
     </h1>	
 <section class="">
@@ -25,12 +21,12 @@ import Anmeldelser from "../components/Anmeldelser.astro";
 			<img class="md:object-cover :w-full h-auto" src={abonnementkasse.src} alt="kasse og vin">
     </div>
     <!-- Højre Content -->
-    <div class="space-y-6">
-      <h2 class="uppercase leading-tight">
+    <div class="">
+      <h2 class="uppercase">
 Rødvinskasse      </h2>
 <div class="flex items-center justify-between">
-      <h4 class="leading-relaxed">
-599,- per måned (alt inklusivt)      </h4>
+      <p class="text-l">
+599,- per måned (alt inklusivt)      </p>
         <a href="/betal"><Button>Køb nu</Button></a>
 </div>
    <p class="text-smb md:text-m leading-relaxed">
