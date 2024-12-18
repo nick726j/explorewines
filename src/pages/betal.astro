@@ -16,7 +16,7 @@ import step1 from "../assets/images/1_3svg.svg";
   <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
     <!-- Venstre Illustration -->
     <div class="hidden md:block md:col-span-2 items-center">
-      <div class="relative h-full border-r border-black">
+      <div class="relative h-full border-r border-brown">
         <!-- Illustration -->
         <img class="md:object-cover w-full h-auto" src={step1.src} alt="kasse og vin" />
       </div>
@@ -24,20 +24,20 @@ import step1 from "../assets/images/1_3svg.svg";
 
     <!-- Højre Indhold -->
     <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
-      <div class="border border-black inline-block">
+      <div class="border border-brown inline-block">
 
         <!-- Titel -->
-        <div class="mb-6 flex justify-between items-center">
+        <div class="ml-6 mb-6 mt-6 flex justify-between items-center">
           <h2>KASSE</h2>
-          <p class="text-mmb md:text-m">Trin 1/3</p>
+          <p class="text-mmb md:text-m mr-6 ">Trin 1/3</p>
         </div>
 
         <!-- Produktliste -->
-        <div class="border-t border-b border-black">
+        <div class="border-t border-b border-brown">
           <!-- Første Produkt -->
           <div class="flex flex-wrap items-center py-4">
             <img src={roedvin.src} alt="Rødvinskasse" class="w-20 h-28 object-cover mr-4" />
-            <div class="flex-1">
+            <div class="flex-1 ml-6 md:-mt-20 -mt-8">
               <p class="text-mmb md:text-m">Rødvinskasse (abonnement)</p>
             </div>
             <div class="flex items-center space-x-2">
@@ -45,7 +45,7 @@ import step1 from "../assets/images/1_3svg.svg";
               <span class="text-mmb md:text-m">1 stk</span>
               <button class="text-xl">+</button>
             </div>
-            <div class="text-mmb md:text-m ml-4 text-right">
+            <div class="text-mmb md:text-m ml-4 text-right mr-6 md:-mt-14 -mt-8">
               <p>599,-</p>
               <a href="#" class="text-red-700 text-sm">fjern x</a>
             </div>
@@ -55,14 +55,14 @@ import step1 from "../assets/images/1_3svg.svg";
           <div class="flex flex-wrap items-center py-4">
             <img src={hvidvin.src} alt="Hvidvinskasse" class="w-20 h-28 object-cover mr-4" />
             <div class="flex-1">
-              <p class="text-mmb md:text-m">Hvidvinskasse (abonnement)</p>
+              <p class="text-mmb md:text-m ml-6 md:-mt-14 -mt-8">Hvidvinskasse (abonnement)</p>
             </div>
             <div class="flex items-center space-x-2">
               <button class="text-xl">-</button>
               <span class="text-mmb md:text-m">1 stk</span>
               <button class="text-xl">+</button>
             </div>
-            <div class="text-mmb md:text-m text-right">
+            <div class="text-mmb md:text-m text-right mr-6 md:-mt-14 -mt-8">
               <p>599,-</p>
               <a href="#" class="text-sm">fjern x</a>
             </div>
@@ -72,14 +72,14 @@ import step1 from "../assets/images/1_3svg.svg";
           <div class="flex flex-wrap items-center py-4">
             <img src={vin1.src} alt="Chardonnay" class="w-20 h-28 object-cover mr-4" />
             <div class="flex-1">
-              <p class="text-mmb md:text-m">2023 Chardonnay, Terre Siciliane IGP</p>
+              <p class="text-mmb md:text-m ml-6 md:-mt-14 -mt-8">2023 Chardonnay, Terre Siciliane IGP</p>
             </div>
             <div class="flex items-center space-x-2">
               <button class="text-xl">-</button>
-              <span class="text-mmb md:text-m">1 stk</span>
+              <span class="text-mmb md:text-m ">1 stk</span>
               <button class="text-xl">+</button>
             </div>
-            <div class="text-mmb md:text-m ml-4 text-right">
+            <div class="text-mmb md:text-m text-right mr-6 md:-mt-14 -mt-8">
               <p>450,-</p>
               <a href="#" class="text-red-700 text-sm">fjern x</a>
             </div>
@@ -87,22 +87,24 @@ import step1 from "../assets/images/1_3svg.svg";
         </div>
 
         <!-- Total -->
-        <div class=" text-mmb md:text-flex justify-between items-center mt-6 text-lg font-medium">
+        <div class=" ml-6 text-mmb md:text-flex justify-between items-center mt-6 text-lg font-medium">
           <span>I alt</span>
-          <span>1049 kr.</span>
+          <span class="md:ml-96">1049 kr.</span>
         </div>
 
         <!-- Knapper -->
         <div class="flex justify-center gap-4 mt-8">
           <!-- Tilbage Knap -->
           <a href="javascript:history.back()">
-            <Button variant="secondary"></Button>
+            <Button variant="back"></Button>
           </a>
 
           <!-- Næste Knap -->
           <a href="/betal2">
             <Button>Næste</Button>
           </a>
+
+          
         </div>
       </div>
     </div>
