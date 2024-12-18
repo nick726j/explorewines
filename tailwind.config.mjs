@@ -25,8 +25,8 @@ export default {
       l: "1.2rem",
 
       xsmb: "0.4rem",
-      smb: "0.6rem",
-      mmb: "0.9rem",
+      smb: "0.8rem",
+      mmb: "1rem",
     },
 
     customProperties: {
