@@ -16,6 +16,9 @@ import tegning1 from "../assets/images/tegning1.svg"
 import herotegning from "../assets/images/logo-u-baggrund-s-tynd.svg"
 import tegning2 from "../assets/images/tegning2.svg"
 import tegning3 from "../assets/images/tegning3.svg"
+import forside1 from "../assets/images/forside1.svg"
+import forside2 from "../assets/images/forside2.svg"
+import forside3 from "../assets/images/forside3.svg"
 import vin1 from "../assets/images/vin1.webp"
 import vin2 from "../assets/images/vin2.webp"
 import vin3 from "../assets/images/vin3.webp"
@@ -71,11 +74,11 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
     </div>
   </div> -->
 
-<div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 place-content-between">
+<div class=" mt-6 md:mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 place-content-between">
   <!-- Rødvinskasse -->
   <div class="flex flex-col">
-    <img class="w-[80%] h-[90%] object-contain" src={tegning1.src} alt="rødvinskasse">
-    <div class="pl-4 md:pl-6"> 
+    <img class="w-[85%] h-[100%] object-contain md:ml-2 ml-6" src={forside1.src} alt="rødvinskasse">
+    <div class="pl-6 md:pl-6 md:mt-6 mt-4"> 
       <p class="text-mmb md:text-l mb-1">Rødvinskasse</p>
       <a class="" href="/rodwin"><Button>Køb nu</Button></a>
     </div>
@@ -83,18 +86,18 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
 
   <!-- Hvidvinskasse -->
   <div class="flex flex-col">
-    <img class="w-[80%] h-[100%] object-contain" src={tegning2.src} alt="hvidvinskasse">
-    <div class="pl-4 md:pl-0">
+    <img class="w-[85%] h-[120%] object-contain md:ml-16 ml-6" src={forside2.src} alt="hvidvinskasse">
+    <div class="pl-6 md:pl-0 md:ml-16 md:mt-6 mt-4">
       <p class="text-mmb md:text-l mb-1">Hvidvinskasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
     </div>
   </div>
 
   <!-- Mixed kasse -->
-  <div class="flex flex-col">
-    <img class="w-[80%] h-[90%] object-contain" src={tegning3.src} alt="mixedkasse">
-    <div class="pl-4 md:pl-0 ">
-      <p class="text-mmb md:text-l mb-1">Mixed kasse</p>
+  <div class="flex flex-col ">
+    <img class="w-[80%] h-[90%] md:ml-20 object-contain ml-6" src={forside3.src} alt="mixedkasse">
+    <div class="pl-6 md:pl-0 md:ml-20 md:mt-6 mt-4">
+      <p class=" text-mmb md:text-l mb-1">Mixed kasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
     </div>
   </div>
@@ -105,19 +108,22 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   																
   																<!-- Shop section -->
 <!-- Vinsektion -->
-<section class=" text-brown border-y mt-20 md:mt-0">
+<section class=" text-brown border-y mt-20 md:mt-0 pb-10 md:pb-10">
   <div class="mx-auto">
     <!-- Top Sektion: Navigation og Titel -->
     <div class="mt-6 flex justify-between items-center md:mb-8">
       <!-- Piletaster -->
-      <div class="flex gap-4">
+      <div class="flex gap-4 ml-6">
   <Button variant="back"></Button>
   <Button variant="primary"></Button>
       </div>
       <!-- Titel -->
       <h3 class="">Vinflasker</h3>
       <!-- Vinshop Knap -->
-                     <a href="/"><Button>Gå til shop</Button></a>
+       <div class="mr-6">
+<a href="/"><Button>Gå til shop</Button></a>
+       </div>
+                     
 
     </div>
 
