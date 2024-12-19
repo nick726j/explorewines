@@ -4,6 +4,8 @@
 
 @layer base {
   html {
+    @apply cursor-handcursor;
+    scroll-behavior: smooth;
     @apply bg-base-background text-base-text; /* Brug de tilføjede farver */
   }
 

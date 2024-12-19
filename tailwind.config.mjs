@@ -49,6 +49,9 @@ export default {
           background: "FFFFF5" /* Lys baggrund */,
         },
       },
+      cursor: {
+        handcursor: "url(/mus.svg) 25 25, pointer",
+      },
     },
     /* Resten af konfigurationen */
   },
