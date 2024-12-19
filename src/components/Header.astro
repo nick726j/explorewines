@@ -8,6 +8,10 @@ import headerlogotext from '../assets/images/logotext.svg';
 import hamburger from '../assets/images/hamburger.svg';
 import kurv from '../assets/images/kurv.svg';
 import login from '../assets/images/login.svg';
+import loginHover from '../assets/images/person_hover.svg';
+import kurvHover from '../assets/images/kurv_hover.svg';
+
+
 ---
   <!-- Top fragt-banner -->
 <div class="mx-auto flex place-content-center bg-brown text-creamywhite">
@@ -46,8 +50,34 @@ import login from '../assets/images/login.svg';
    <a href="/abonnement">
             <Button>Bliv abonnent</Button>
           </a>    <div class="flex items-center gap-4">
-      <img src={login.src} alt="User Icon" class="w-6 h-6" />
-      <img src={kurv.src} alt="Cart Icon" class="w-6 h-6" />
+      <div class="relative w-6 h-6 group">
+  <!-- Default billede -->
+  <img 
+    src={login.src} 
+    alt="User Icon" 
+    class="w-6 h-6 absolute group-hover:opacity-0 transition-opacity duration-300"
+  >
+  <!-- Hover billede -->
+  <img 
+    src={loginHover.src} 
+    alt="User Icon Hover" 
+    class="w-6 h-6 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+</div>
+            <div class="relative w-6 h-6 group">
+  <!-- Default billede -->
+  <img 
+    src={kurv.src} 
+    alt="User Icon" 
+    class="w-6 h-6 absolute group-hover:opacity-0 transition-opacity duration-300"
+  >
+  <!-- Hover billede -->
+  <img 
+    src={kurvHover.src} 
+    alt="User Icon Hover" 
+    class="w-6 h-6 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+</div>
     </div>
   </div>
 
@@ -126,8 +156,34 @@ import login from '../assets/images/login.svg';
     <a href="/" class="text-mmb hover:underline">Vinshop</a>
     <a href="/om" class="text-mmb hover:underline">Om os</a>
     <div class="flex gap-4">
-      <img src={login.src} alt="User Icon" class="w-6 h-6" />
-      <img src={kurv.src} alt="Cart Icon" class="w-6 h-6" />
+      <div class="relative w-6 h-6 group">
+  <!-- Default billede -->
+  <img 
+    src={login.src} 
+    alt="User Icon" 
+    class="w-6 h-6 absolute group-hover:opacity-0 transition-opacity duration-300"
+  >
+  <!-- Hover billede -->
+  <img 
+    src={loginHover.src} 
+    alt="User Icon Hover" 
+    class="w-6 h-6 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+</div>
+            <div class="relative w-6 h-6 group">
+  <!-- Default billede -->
+  <img 
+    src={kurv.src} 
+    alt="User Icon" 
+    class="w-6 h-6 absolute group-hover:opacity-0 transition-opacity duration-300"
+  >
+  <!-- Hover billede -->
+  <img 
+    src={kurvHover.src} 
+    alt="User Icon Hover" 
+    class="w-6 h-6 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+</div>
     </div>  
 </nav>
 </div>
