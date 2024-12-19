@@ -8,6 +8,8 @@ import stepbystepmobile from "../assets/images/stepbystepmobile.svg"
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Card from "../components/Card.astro";
 import Abonnementcard from "../components/Abonnementcard.astro";
+import roedvin from "../assets/images/roedvin.webp"
+
 
 
 ---
@@ -30,7 +32,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <div class="card group" data-card="1">
       <a href="/rodwin">
       <Abonnementcard
-        cardimage="roedvin.webp"
+        cardimage={roedvin.src}
         cardimagealt="flasker"
         navn="Rødvinskasse"
         description="Med rødvinskassen får du rødvine fra hele verden. Oplev frugtig Syrah fra Rhône og elegant Tempranillo fra Spanien, fyldig Touriga Nacional fra Portugal og klassisk Pinotage fra Sydafrika. Rødvinskassen er perfekt til vinsmagning eller som en eksklusiv tilføjelse til din vinreol!"
@@ -42,7 +44,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <div class="card group" data-card="2">
           <a href="/rodwin">
       <Abonnementcard
-        cardimage="hvidvin.webp"
+        cardimage={roedvin.src}
         cardimagealt="Vinflaske"
         navn="Hvidvinskasse"
         description="Udforsk en verden af smag med fire unikke hvidvine fra forskellige hjørner af kloden. Nyd den livlige Chenin Blanc fra Sydafrikas Coastal Region, den blomstrede Torrontés fra Mendoza i Argentina, den delikate Riesling Spätlese Trocken fra Rheinhessen i Tyskland og den friske Verdejo fra Spaniens DO La Mancha. Denne hvidvinskasse er ideel til en smagfuld oplevelse eller som et eksklusivt indslag på din vinreol!"
@@ -54,7 +56,7 @@ import Abonnementcard from "../components/Abonnementcard.astro";
     <div class="card group" data-card="3">
       <a href="/rodwin">
       <Abonnementcard
-        cardimage="mixed.webp"
+        cardimage={roedvin.src}
         cardimagealt="Vinflaske"
         navn="Mixedkasse"
         description="Tag på en smagsrejse med otte udsøgte vine fra hele verden. Nyd frugtig Syrah, elegant Tempranillo, fyldig Touriga Nacional og klassisk Pinotage blandt rødvinene. Fra hvidvinsudvalget venter livlig Chenin Blanc, aromatisk Torrontés, delikat Riesling og sprød Verdejo. En oplagt mulighed for at udforske nye smagsoplevelser eller tilføje et sofistikeret touch til din vinreol!"
