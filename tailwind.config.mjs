@@ -24,7 +24,7 @@ export default {
       m: "1rem",
       l: "1.2rem",
 
-      xsmb: "0.4rem",
+      xsmb: "0.6rem",
       smb: "0.8rem",
       mmb: "1rem",
     },
