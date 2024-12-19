@@ -17,26 +17,36 @@ import step1 from "../assets/images/1_3svg.svg";
     <!-- Venstre Illustration -->
     <div class="hidden md:block md:col-span-2 items-center">
       <div class="relative h-full border-r border-brown">
+
+        
         <!-- Illustration -->
         <img class="md:object-cover w-full h-auto" src={step1.src} alt="kasse og vin" />
       </div>
     </div>
 
     <!-- Højre Indhold -->
-    <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
+    <div class="-mt-20 md:mt-10 md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
       <div class="border border-brown inline-block">
+
+
+      <!-- knap -->
+                 <div class=" md:mb-5">
+                  <a href="javascript:history.back()">
+                      <Button variant="back"></Button>
+                    </a>
+                </div>
 
         <!-- Titel -->
         <div class="ml-6 mb-6 mt-6 flex justify-between items-center">
           <h2>KASSE</h2>
-          <p class="text-mmb md:text-m mr-6 ">Trin 1/3</p>
+          <p class="text-mmb md:text-m mr-6">Trin 1/3</p>
         </div>
 
         <!-- Produktliste -->
         <div class="border-t border-b border-brown">
           <!-- Første Produkt -->
-          <div class="flex flex-wrap items-center py-4">
-            <img src={roedvin.src} alt="Rødvinskasse" class="w-20 h-28 object-cover mr-4" />
+          <div class="flex flex-wrap items-center py-4 -mt-2 -mb-6">
+            <img src={roedvin.src} alt="Rødvinskasse" class="w-20 h-28 md:w-[15%] md:h-[20%] object-cover mr-4" />
             <div class="flex-1 ml-6 md:-mt-20 -mt-8">
               <p class="text-mmb md:text-m">Rødvinskasse (abonnement)</p>
             </div>
@@ -51,26 +61,14 @@ import step1 from "../assets/images/1_3svg.svg";
             </div>
           </div>
 
-          <!-- Andet Produkt -->
-          <div class="flex flex-wrap items-center py-4">
-            <img src={hvidvin.src} alt="Hvidvinskasse" class="w-20 h-28 object-cover mr-4" />
-            <div class="flex-1">
-              <p class="text-mmb md:text-m ml-6 md:-mt-14 -mt-8">Hvidvinskasse (abonnement)</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <button class="text-xl">-</button>
-              <span class="text-mmb md:text-m">1 stk</span>
-              <button class="text-xl">+</button>
-            </div>
-            <div class="text-mmb md:text-m text-right mr-6 md:-mt-14 -mt-8">
-              <p>599,-</p>
-              <a href="#" class="text-sm">fjern x</a>
-            </div>
-          </div>
+          
 
-          <!-- Tredje Produkt -->
-          <div class="flex flex-wrap items-center py-4">
-            <img src={vin1.src} alt="Chardonnay" class="w-20 h-28 object-cover mr-4" />
+          <!-- Andet Produkt -->
+    
+
+          <div class="flex flex-wrap items-center py-4 ">
+                        <div class="h-px w-full bg-brown mb-4"></div>
+            <img src={vin1.src} alt="Chardonnay" class="w-20 h-28 object-cover mr-4 md:w-[15%] md:h-[20%] -mt-2 -mb-2" />
             <div class="flex-1">
               <p class="text-mmb md:text-m ml-6 md:-mt-14 -mt-8">2023 Chardonnay, Terre Siciliane IGP</p>
             </div>
@@ -89,26 +87,40 @@ import step1 from "../assets/images/1_3svg.svg";
         <!-- Total -->
         <div class=" ml-6 text-mmb md:text-flex justify-between items-center mt-6 text-lg font-medium">
           <span>I alt</span>
-          <span class="md:ml-96">1049 kr.</span>
+          <span class="md:ml-[38rem] ml-[19rem]">1049 kr.</span>
         </div>
 
         <!-- Knapper -->
-        <div class="flex justify-center gap-4 mt-8">
-          <!-- Tilbage Knap -->
-          <a href="javascript:history.back()">
-            <Button variant="back"></Button>
-          </a>
+        <div class="flex justify-center gap-4 mt-8 mb-6">
+
 
           <!-- Næste Knap -->
           <a href="/betal2">
             <Button>Næste</Button>
           </a>
 
-          
+
+        </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+       <!-- Næste Knap -->
+        <!-- <div class="ml-[60rem] -mt-16 mb-8">
+   <a href="/betal2" class="">
+            <Button>Næste</Button>
+          </a>
+        </div> -->
+       
+
 </section>
+
+<section>
+      <div>
+        <img class="mb-16 -mt-20 block sm:hidden md:object-cover w-[100%] h-[90%] object-cover " src={step1.src} alt="kasse og vin">
+      </div>
+
+</section>
+
+
 
 </MainLayout>
