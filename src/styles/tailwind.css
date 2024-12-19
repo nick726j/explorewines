@@ -5,9 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    cursor: url("/muz.png") 15 15, pointer;
     @apply bg-base-background text-base-text; /* Brug de tilføjede farver */
   }
-
   body {
     @apply bg-base-background text-base-text;
   }
@@ -18,7 +18,6 @@
     @apply text-base-text; /* Links har også brun farve */
     @apply cursor-handcursor;
   }
-
   h1,
   h2,
   h3,

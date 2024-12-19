@@ -50,7 +50,7 @@ export default {
         },
       },
       cursor: {
-        handcursor: "url(public/mus.svg) 25 25, pointer",
+        handcursor: "url(/muz.png) 15 15, pointer",
       },
     },
     /* Resten af konfigurationen */
