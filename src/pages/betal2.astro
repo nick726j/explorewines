@@ -20,8 +20,14 @@ import step2 from "../assets/images/2_3.svg";
     </div>
 
     <!-- Højre Indhold -->
-    <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
+    <div class="-mt-20 md:mt-10 md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
       <div class="border border-brown p-6 md:p-12 inline-block w-full">
+
+         <div class=" md:mb-5">
+            <a href="javascript:history.back()">
+                <Button variant="back"></Button>
+              </a>
+         </div>
 
         <!-- Titel -->
       
@@ -70,11 +76,8 @@ import step2 from "../assets/images/2_3.svg";
           <div class="flex justify-center gap-4">
 
             <div class="flex justify-center gap-4 mt-8">
-          <!-- Tilbage Knap -->
-          <a href="javascript:history.back()">
-            <Button variant="back"></Button>
-          </a>
-          
+      
+
             <!-- Tilbage Knap -->
            
             <!-- Næste Knap -->
@@ -87,5 +90,6 @@ import step2 from "../assets/images/2_3.svg";
     </div>
   </div>
 </section>
+<img class="mb-10 -mt-20 block sm:hidden md:object-cover w-[100%] h-[90%] object-cover " src={step2.src} alt="kasse og vin">
 
 </MainLayout>

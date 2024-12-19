@@ -10,19 +10,22 @@ import step3 from "../assets/images/3_3.svg";
 <MainLayout title="Step 3/3">
 
 <!-- Købsflow Side -->
-<section class="text-black">
+<section class="text-brown">
   <div class="grid grid-cols-1 md:grid-cols-6 mx-auto">
     <!-- Venstre Illustration -->
     <div class="hidden md:block md:col-span-2 items-center">
-      <div class="relative h-full border-r border-black">
+      <div class="relative h-full border-r border-brown">
         <!-- Illustration -->
-        <img class="md:object-cover w-full h-auto" src={step3.src} alt="Vinflakse, og vinglas" />
+         <div class="">
+              <img class="md:object-cover w-full h-auto" src={step3.src} alt="Vinflakse, og vinglas" />
+         </div>
+       
       </div>
     </div>
 
     <!-- Højre Indhold -->
-    <div class="md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
-      <div class="border border-black p-6 md:p-12 inline-block w-full">
+    <div class="-mt-4 md:mt-24 md:col-span-4 my-4 md:mx-16 lg:mx-24 xl:mx-32 md:my-12 flex justify-center items-center min-h-screen">
+      <div class="border border-brown p-6 md:p-12 inline-block w-full">
 
             <!-- Knap -->
   <div class=" mr-[22rem] md:mr-[42rem] md:mb-5">
@@ -111,5 +114,6 @@ import step3 from "../assets/images/3_3.svg";
     </div>
   </div>
 </section>
+<img class="mb-10 block sm:hidden md:object-cover w-[100%] h-[90%] object-cover " src={step3.src} alt="kasse og vin">
 
 </MainLayout>
