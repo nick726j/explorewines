@@ -6,6 +6,8 @@ import { Image } from 'astro:assets';
 import Card from "../components/Card.astro";
 import abonnementkasse from "../assets/images/abonnementkasse.svg";
 import Anmeldelser from "../components/Anmeldelser.astro";
+import vinsingle from "../assets/images/singleview.webp"
+
 ---
 <MainLayout title="Rødvinskassen">
 	<article class="mx-auto">
@@ -95,7 +97,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
     <!-- 1 Card -->
     <div class="card group" data-card="1">
       <Card
-        cardimage="singleview.webp"
+        cardimage={vinsingle.src}
         cardimagealt="Vinflaske"
         navn="Jongieux Blanc, Vin De,"
         land="Frankrig"
@@ -108,7 +110,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
     <!-- 2 Card -->
     <div class="card group" data-card="2">
       <Card
-        cardimage="singleview.webp"
+        cardimage={vinsingle.src}
         cardimagealt="Vinflaske"
         navn="L A Cruz Vega Roble, Bogarve,"
         land="Spanien"
@@ -121,7 +123,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
     <!-- 3 Card -->
     <div class="card group" data-card="3">
       <Card
-        cardimage="singleview.webp"
+        cardimage={vinsingle.src}
         cardimagealt="Vinflaske"
         navn="Escriba Reserva, DOC do Tejo,"
         land="Portugal"
@@ -134,7 +136,7 @@ Tag på en smagsrejse med fire nøje udvalgte rødvine fra hele verden. Oplev fr
     <!-- 4 Card -->
     <div class="card group" data-card="4">
       <Card
-        cardimage="singleview.webp"
+        cardimage={vinsingle.src}
         cardimagealt="Vinflaske"
         navn="Pinotage Organic Wine By Sophie,"
         land="Sydafrika"
