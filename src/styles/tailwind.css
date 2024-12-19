@@ -24,9 +24,6 @@
   }
 }
 
-a {
-  @apply text-s;
-}
 input::placeholder,
 textarea::placeholder {
   @apply text-smb;
@@ -58,9 +55,6 @@ h5 {
 }
 @media (max-width: 639px) {
   /* Mobil: Under sm-breakpoint (640px) */
-  a {
-    @apply text-smb;
-  }
   input::placeholder,
   textarea::placeholder {
     @apply text-smb;
