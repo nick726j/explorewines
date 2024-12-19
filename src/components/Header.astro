@@ -48,7 +48,9 @@ import kurvHover from '../assets/images/kurv_hover.svg';
   <!-- Højre side: Call-to-Action & Icons -->
   <div class="hidden md:flex items-center gap-6">
    <a href="/abonnement">
-            <Button>Bliv abonnent</Button>
+             <button class="group border py-1 px-3 md:px-4 text-smb md:text-s rounded-3xl inline-flex flex-nowrap items-center gap-3 justify-between border-brown hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors" >
+    <slot>Bliv abonnent</slot>
+  </button>
           </a>    <div class="flex items-center gap-4">
       <div class="relative w-6 h-6 group">
   <!-- Default billede -->
@@ -82,6 +84,12 @@ import kurvHover from '../assets/images/kurv_hover.svg';
   </div>
 
   <!-- Hamburger Menu til Mobile -->
+   <div class="flex md:hidden">
+    <a class="mr-2" href="/abonnement">
+             <button class="group border py-1 px-3 md:px-4 text-smb md:text-s rounded-3xl inline-flex flex-nowrap items-center gap-3 justify-between border-brown hover:bg-orange hover:text-creamywhite hover:border-orange transition-colors" >
+    <slot>Bliv abonnent</slot>
+  </button>
+          </a>    
   <button
     id="menu-toggle"
     class="md:hidden flex items-center justify-center w-8 h-8"
@@ -119,6 +127,8 @@ import kurvHover from '../assets/images/kurv_hover.svg';
       />
     </svg>
   </button>
+          </div>
+
 </div>
 
 <!-- Søge felt -->
