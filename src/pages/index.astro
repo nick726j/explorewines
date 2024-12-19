@@ -3,14 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import bordvin from "../assets/images/bordvin.svg";
 import logo from "../assets/images/logo.svg";
 import collage from "../assets/images/collage.webp"
-import collagemobil from "../assets/images/collagemobil.png"
-import collagem from "../assets/images/collagem.png"
+import collagem from "../assets/images/collagem.webp"
 import Anmeldelser from "../components/Anmeldelser.astro";
 import tegning1 from "../assets/images/tegning1.svg"
 import herotegning from "../assets/images/logo-u-baggrund-s-tynd.svg"
@@ -53,7 +49,7 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
   <div class="absolute left-16 bottom-20 w-2/3 h-2/3 z-10 flex items-center justify-center max-h-full">
     <img 
       src={herotextfulg.src} 
-      alt="SVG ikon"
+      alt="Logo fugl"
       class="w-full h-auto"
     >
   </div>
@@ -63,7 +59,7 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
     <div class=" z-0 flex items-center justify-center">
       <img 
         src={hero1.src} 
-        alt="Højre billede"
+        alt="Flaske vin"
         class="object-cover w-full h-[50rem] mt-20"
       >
       
@@ -72,8 +68,8 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
       <a href="/abonnement">
     <img 
       src={Udforsk.src} 
-      alt="SVG ikon"
-      class="w-full h-auto"
+      alt="Udforsk udvalg knap"
+      class="w-full h-auto scale-100 hover:scale-110  ease-in duration-20 cursor cursor-handcursor "
     >
     </a>
   </div>
@@ -90,7 +86,7 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
   <div class="absolute pt-5 px-4 z-10 flex items-center justify-center max-h-full">
     <img 
       src={herotextfulg.src} 
-      alt="SVG ikon"
+      alt="Logo fugl"
       class="w-full h-auto"
     >
   </div>
@@ -100,7 +96,7 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
     <div class=" z-0 flex items-center justify-center">
       <img 
         src={hero1.src} 
-        alt="Højre billede"
+        alt="Flaske vin"
         class="object-cover w-full h-full]"
       >
       
@@ -109,7 +105,7 @@ import Udforskmobil from "../assets/images/knapheromobil.svg"
       <a href="/abonnement">
     <img 
       src={Udforskmobil.src} 
-      alt="SVG ikon"
+      alt="Udforsk udvalg knap"
       class="w-screen h-auto"
     >
     </a>
@@ -135,7 +131,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   <!-- Rødvinskasse -->
   <div class="flex flex-col justify-between">
     <a href="/rodwin">
-    <img class="w-[85%] h-[100%] object-contain md:ml-2 ml-6" src={forside1.src} alt="rødvinskasse">
+    <img class="w-[85%] h-[100%] object-contain md:ml-2 ml-6 scale-100 hover:scale-105 transition" src={forside1.src} alt="rødvinskasse">
     <div class="pl-6 md:pl-6 md:mt-6 mt-4"> 
       <p class="text-mmb md:text-l mb-1">Rødvinskasse</p>
       <a class="" href="/rodwin"><Button>Køb nu</Button></a>
@@ -146,8 +142,8 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   <!-- Hvidvinskasse -->
     <div class="flex flex-col justify-between">
         <a href="/rodwin">
-    <img class="w-[85%] h-[120%] object-contain md:ml-16 ml-6" src={forside2.src} alt="hvidvinskasse">
-    <div class="pl-6 md:pl-0 md:ml-16 md:mt-6 mt-4">
+    <img class="w-[85%] h-[120%] object-contain md:ml-16 ml-6 scale-100 hover:scale-105 transition" src={forside2.src} alt="hvidvinskasse">
+    <div class="pl-6 md:pl-0 md:ml-16 md:mt-6 mt-4 ">
       <p class="text-mmb md:text-l mb-1">Hvidvinskasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
       
@@ -157,7 +153,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
   <!-- Mixed kasse -->
   <div class="flex flex-col justify-between">
         <a href="/rodwin">
-    <img class="w-[80%] h-[100%] md:ml-20 object-contain ml-6" src={forside3.src} alt="mixedkasse">
+    <img class="w-[80%] h-[100%] md:ml-20 object-contain ml-6 scale-100 hover:scale-105 transition" src={forside3.src} alt="mixedkasse">
     <div class="pl-6 md:pl-0 md:ml-20 md:mt-6 mt-4">
       <p class=" text-mmb md:text-l mb-1">Mixed kasse</p>
       <a href="/rodwin"><Button>Køb nu</Button></a>
@@ -184,7 +180,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
       <h3 class="">Vinflasker</h3>
       <!-- Vinshop Knap -->
        <div class="mr-6">
-<a href="/"><Button>Gå til shop</Button></a>
+<a href="/"><Button variant="tertiary">Gå til shop</Button></a>
        </div>
                      
 
@@ -313,7 +309,7 @@ Med vores vinabonnement får du mulighed for at smage forskellige vine hver mån
       />
       <button 
         type="submit" 
-        class="flex items-center justify-center px-6 py-3 border-r border-y border-brown text-lg font-medium hover:bg-red-700 hover:text-orange transition">
+        class="flex items-center justify-center px-6 py-3 border-r border-y border-brown text-lg font-medium hover:bg-brown hover:text-creamywhite transition">
         →
       </button>
     </form>

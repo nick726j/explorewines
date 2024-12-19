@@ -4,15 +4,19 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     @apply bg-base-background text-base-text; /* Brug de tilføjede farver */
   }
 
   body {
     @apply bg-base-background text-base-text;
   }
-
+  button {
+    @apply cursor-handcursor;
+  }
   a {
     @apply text-base-text; /* Links har også brun farve */
+    @apply cursor-handcursor;
   }
 
   h1,
